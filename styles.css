@@ -678,15 +678,14 @@ body {
     z-index: 10;
     top: 50%;
     left: 0;
-
     /* This moves the image further to the left */
-    transform: translateX(-75%) translateY(-50%) rotateY(15deg) rotateX(-5deg);
-    
+    transform: translateX(-75%) translateY(-50%) rotateY(15deg) rotateX(-5deg); 
     transform-origin: center center;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.4));
     transition: transform 0.4s ease-out;
     opacity: 0;
     animation: fade-in-effect 2s ease-out 0.5s forwards;
+    will-change: transform;
 }
 /* Styles for the RIGHT interactive image */
 #right-interactive-image {
@@ -708,6 +707,8 @@ body {
     transition: transform 0.4s ease-out;
     opacity: 0;
     animation: fade-in-effect 2s ease-out 0.5s forwards;
+    will-change: transform;
+    
 }
 
 /* Common styles for the actual image tags inside the containers */
