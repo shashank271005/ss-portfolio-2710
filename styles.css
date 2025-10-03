@@ -7,7 +7,7 @@ html {
 body {
     background-color: rgb(0, 0, 0);
     margin: 0;
-     overflow-x: hidden; 
+    overflow-x: hidden;
 
 }
 
@@ -517,30 +517,6 @@ body {
     color: #58a6ff;
 }
 
-/* .interactive-image-container {
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    z-index: 10;
-    top: 50%;
-    left: 110%;
-    transform: translate(-60%, -50%) rotateY(-15deg) rotateX(5deg);
-    transform-origin: center center;
-    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.4));
-    transition: transform 0.4s ease-out;
-    opacity: 0;
-    animation: fade-in-effect 2s ease-out 0.5s forwards;
-}
-
-#interactive-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-} */
-
-
-
 
 
 
@@ -603,20 +579,28 @@ body {
 
 .projects {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Changed from 'center' */
     align-items: center;
     min-height: 100vh;
     background-color: #121212;
     margin: 0;
     font-family: 'Google Sans Display';
-
+    padding: 0 5rem;
+    /* Added for spacing from the edge */
+    box-sizing: border-box;
+    /* Ensures padding is included in the element's total width */
+    
 }
 
 
 .wavy-text {
+    display: flex;
+    flex-wrap: wrap;
+    /* REMOVED: width: 35ch; */
+    font-family: 'Work Sans', sans-serif, 'Mozilla Text', serif;
     font-size: 5rem;
-    margin-top: 0.2em;
-    font-weight: default;
+    font-weight: bold;
     line-height: 1.1;
     background: linear-gradient(90deg, #FFA800, #FF6A3A, #D72660, #B721FF);
     -webkit-background-clip: text;
@@ -624,10 +608,20 @@ body {
     background-clip: text;
     color: transparent;
     cursor: default;
+    user-select: none;
+    text-align: left;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+
+.wavy-text span:nth-child(9) {
+    flex-basis: 100%;
+    height: 0;
+}
+
+
+
 
 .wavy-text span {
     background: linear-gradient(90deg, #FFA800, #FF6A3A, #D72660, #B721FF);
@@ -639,7 +633,7 @@ body {
     position: relative;
 }
 
-/* No changes needed to the animation code below */
+
 
 .wavy-text.animate span {
     animation: wave-lift 1s ease-in-out;
@@ -681,7 +675,7 @@ body {
     top: 50%;
     left: 0;
     /* This moves the image further to the left */
-    transform: translateX(-75%) translateY(-50%) rotateY(15deg) rotateX(-5deg); 
+    transform: translateX(-75%) translateY(-50%) rotateY(15deg) rotateX(-5deg);
     transform-origin: center center;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.4));
     transition: transform 0.4s ease-out;
@@ -689,28 +683,29 @@ body {
     animation: fade-in-effect 2s ease-out 0.5s forwards;
     will-change: transform;
 }
+
 /* Styles for the RIGHT interactive image */
 #right-interactive-image {
     position: absolute;
     width: 450px;
     height: 450px;
     z-index: 10;
-    
-    
-    top: 55%; 
+
+
+    top: 55%;
 
     right: 0;
-    
-    
+
+
     transform: translateX(75%) translateY(-50%) rotateY(-15deg) rotateX(5deg);
-    
+
     transform-origin: center center;
     filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.4));
     transition: transform 0.4s ease-out;
     opacity: 0;
     animation: fade-in-effect 2s ease-out 0.5s forwards;
     will-change: transform;
-    
+
 }
 
 /* Common styles for the actual image tags inside the containers */
@@ -719,5 +714,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 12px; 
+    border-radius: 12px;
 }
+
+
+
+/* upar clear hai kuch mt chedo */
