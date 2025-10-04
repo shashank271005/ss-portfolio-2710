@@ -746,7 +746,7 @@ body {
     max-width: 1200px;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 2s ease-out;
+    transition: transform 2.5s ease-out;
     transform: perspective(1000px);
     
 }
