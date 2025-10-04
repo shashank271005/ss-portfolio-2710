@@ -672,7 +672,7 @@ body {
 }
 
 .get-to-work-section .section-heading {
-    font-size: 3.8rem;
+    font-size: 4rem;
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 2rem;
@@ -681,7 +681,7 @@ body {
 }
 
 .get-to-work-section .description-text {
-    font-size: 1.1rem;
+    font-size: 0.97rem;
     font-weight: 300;
     line-height: 1.6;
     max-width: 900px;
@@ -692,7 +692,7 @@ body {
 
 
 .get-to-work-section .secondary-text {
-    font-size: 1rem;
+    font-size: 0.97rem;
     font-weight: 300;
     line-height: 1.5;
     max-width: 700px;
