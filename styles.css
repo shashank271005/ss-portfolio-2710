@@ -743,10 +743,11 @@ body {
     max-width: 1200px;
     border-radius: 15px;
     overflow: hidden;
-
-    /* ADD these two lines for the 3D tilt effect */
-    transition: transform 0.1s ease-out;
-    transform: perspective(1000px); /* This enables the 3D space */
+    
+    
+    transition: transform 2s ease-out;
+    
+    transform: perspective(1000px);
 }
 
 /* .image-showcase-section .responsive-image {
