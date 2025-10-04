@@ -725,7 +725,10 @@ body {
     padding: 4rem 2rem;      
     background-color: transparent; 
     margin-top: 5vh;         
-    margin-bottom: 5vh;      
+    margin-bottom: 5vh;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;      
 }
 
 .image-showcase-section .image-container {
@@ -743,11 +746,9 @@ body {
     max-width: 1200px;
     border-radius: 15px;
     overflow: hidden;
-    
-    
     transition: transform 2s ease-out;
-    
     transform: perspective(1000px);
+    
 }
 
 /* .image-showcase-section .responsive-image {
