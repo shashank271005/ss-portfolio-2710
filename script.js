@@ -267,3 +267,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
+
+
+/* ---------------- "GET TO WORK" SECTION FADE-IN ANIMATION ---------------- */
+const getToWorkSection = document.querySelector('.get-to-work-section');
+if (getToWorkSection) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // If the section is intersecting (scrolling into view)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } 
+            // If the section is NOT intersecting (scrolling out of view)
+            else {
+                entry.target.classList.remove('is-visible');
+            }
+        });
+    }, { 
+        // Wait until 45% of the section is visible to trigger the animation
+        threshold: 0.45
+    });
+    
+    sectionObserver.observe(getToWorkSection);
+}
