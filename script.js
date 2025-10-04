@@ -143,50 +143,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const skillsSection = document.querySelector('.skills-terminal-section');
-//     const interactiveImageContainer = document.querySelector('.interactive-image-container');
-
-//     if (skillsSection && interactiveImageContainer) {
-//         const baseTransform = 'translate(-60%, -50%) rotateY(-15deg) rotateX(5deg)'; 
-//         const initialOffsetY = 200; 
-
-//         const updateImagePosition = () => {
-//             const sectionRect = skillsSection.getBoundingClientRect();
-//             const viewportHeight = window.innerHeight;
-
-            
-//             const animationStartPoint = sectionRect.bottom - (viewportHeight * 0.2);
-            
-//             const animationEndPoint = sectionRect.top;
-
-//             let progress = 0;
-
-//             if (viewportHeight > 0) {
-                
-//                 progress = 1 - (animationStartPoint - viewportHeight) / (animationStartPoint - animationEndPoint);
-//                 progress = Math.min(1, Math.max(0, progress)); 
-//             }
-
-            
-//             const currentOffsetY = initialOffsetY * (1 - progress);
-
-            
-//             interactiveImageContainer.style.transform = `${baseTransform} translateY(${currentOffsetY}px)`;
-//         };
-
-        
-//         window.addEventListener('scroll', updateImagePosition);
-
-        
-//         updateImagePosition();
-//     }
-// });
-
-
-
-
 // upar ka mt chedo all clear
 
 
@@ -195,83 +151,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const wavyText = document.querySelector('.wavy-text');
-    if (!wavyText) return;
-
-    const textContent = wavyText.textContent;
-    
-    // Split the text into an array of characters, creating a span for each
-    const letters = textContent.split('').map(char => {
-        if (char === ' ') {
-            return `<span>&nbsp;</span>`;
-        }
-        return `<span>${char}</span>`;
-    }).join('');
-    
-    // Replace the original text with the new spans
-    wavyText.innerHTML = letters;
-    
-    // Apply a forward staggered animation delay to each span
-    const spans = wavyText.querySelectorAll('span');
-    spans.forEach((span, index) => {
-        // The delay now starts from the beginning (index 0)
-        span.style.animationDelay = `${index * 50}ms`;
-    });
-
-    // --- Intersection Observer to trigger animation on every scroll ---
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // If the element is intersecting the viewport (visible)
-            if (entry.isIntersecting) {
-                // Add the .animate class to trigger the CSS animation
-                entry.target.classList.add('animate');
-            } else {
-                // If it's not visible, remove the class to reset the animation
-                entry.target.classList.remove('animate');
-            }
-        });
-    }, {
-        threshold: 0.5 // Triggers when 50% of the element is visible
-    });
-
-    // Start observing the .wavy-text element
-    observer.observe(wavyText);
-});
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const targetElement = document.querySelector('.wavy-text'); // Or whatever element you want
+    const targetElement = document.querySelector('.wavy-text'); 
     const glassCursor = document.getElementById('glass-cursor');
 
     if (!targetElement || !glassCursor) return;
 
-    // Update cursor position using CSS variables for better performance
+    
     window.addEventListener('mousemove', (e) => {
         glassCursor.style.setProperty('--x', e.clientX + 'px');
         glassCursor.style.setProperty('--y', e.clientY + 'px');
     });
 
-    // When mouse enters the target element
+    
     targetElement.addEventListener('mouseenter', () => {
         glassCursor.classList.add('active');
     });
 
-    // When mouse leaves the target element
+    
     targetElement.addEventListener('mouseleave', () => {
         glassCursor.classList.remove('active');
     });
@@ -325,3 +222,48 @@ document.addEventListener('DOMContentLoaded', () => {
         updateImagePosition();
     }
 });
+
+
+
+
+
+
+
+// upar ok
+
+
+/* ---------------- 3D INTERACTIVE TILT EFFECT ANIMATION ---------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const parentSection = document.querySelector('.image-showcase-section');
+    const imageContainer = document.querySelector('.image-showcase-section .image-container');
+
+    if (parentSection && imageContainer) {
+        const tiltIntensity = 15;
+        let animationFrameId = null;
+
+        parentSection.addEventListener('mousemove', (e) => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+
+            animationFrameId = requestAnimationFrame(() => {
+                const rect = imageContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                const rotateY = (x / (rect.width / 2)) * tiltIntensity;
+                const rotateX = -(y / (rect.height / 2)) * tiltIntensity;
+                imageContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+        });
+
+        parentSection.addEventListener('mouseleave', () => {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            imageContainer.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    }
+});
+
+

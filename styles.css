@@ -568,28 +568,20 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-.projects {
+/* .projects {
     display: flex;
     justify-content: flex-start;
-    /* Changed from 'center' */
+    
     align-items: center;
     min-height: 100vh;
     background-color: #121212;
     margin: 0;
     font-family: 'Google Sans Display';
     padding: 0 5rem;
-    /* Added for spacing from the edge */
+   
     box-sizing: border-box;
-    /* Ensures padding is included in the element's total width */
+    
+    
     
 }
 
@@ -597,7 +589,6 @@ body {
 .wavy-text {
     display: flex;
     flex-wrap: wrap;
-    /* REMOVED: width: 35ch; */
     font-family: 'Work Sans', sans-serif, 'Mozilla Text', serif;
     font-size: 5rem;
     font-weight: bold;
@@ -662,7 +653,7 @@ body {
     }
 }
 
-
+ */
 
 
 
@@ -720,3 +711,68 @@ body {
 
 
 /* upar clear hai kuch mt chedo */
+
+
+
+
+
+/* --- New Image Showcase Section --- */
+.image-showcase-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 80vh;        
+    padding: 4rem 2rem;      
+    background-color: transparent; 
+    margin-top: 5vh;         
+    margin-bottom: 5vh;      
+}
+
+.image-showcase-section .image-container {
+    position: relative;
+    width: 80%; 
+    max-width: 1200px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+}
+
+/* Find this existing rule and modify it */
+.image-showcase-section .image-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    /* ADD these two lines for the 3D tilt effect */
+    transition: transform 0.1s ease-out;
+    transform: perspective(1000px); /* This enables the 3D space */
+}
+
+/* .image-showcase-section .responsive-image {
+    width: 100%; 
+    height: auto;
+    display: block; 
+    border-radius: 15px; 
+} */
+
+
+@media (max-width: 768px) {
+    .image-showcase-section {
+        min-height: 50vh;
+        padding: 2rem 1rem;
+    }
+    .image-showcase-section .image-container {
+        width: 95%; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
