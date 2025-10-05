@@ -3,6 +3,8 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    
 }
 
 body {
@@ -13,14 +15,14 @@ body {
 
 /* --- HERO SECTION --- */
 .hero-wrapper {
-    position: absolute;
+     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%; 
 }
 
 .hero {
