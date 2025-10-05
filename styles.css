@@ -190,7 +190,7 @@ body {
 
 /* --- NAVIGATION BAR --- */
 .nav-bar-row {
-    position: absolute;
+    position: fixed;
     top: 2rem;
     left: 0;
     width: 100%;
@@ -209,6 +209,8 @@ body {
     left: 0;
     z-index: -1;
     cursor: pointer;
+    /* border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 45%; */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -227,7 +229,7 @@ body {
 
 .glass-navbar {
     margin-left: auto;
-    background: rgba(30, 30, 40, 0.45);
+    /* background: rgba(30, 30, 40, 0.45); */
     border-radius: 40px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.18);
@@ -672,6 +674,12 @@ body {
     user-select: none; */
 }
 
+.get-to-work-section::selection {
+    background: #ff9800;
+    color: #fff;
+}
+
+
 .get-to-work-section .section-heading {
     font-size: 4rem;
     font-weight: 600;
@@ -786,7 +794,7 @@ body {
     .get-to-work-section .secondary-text {
         font-size: 0.95rem;
         padding: 0 1rem;
-        
+
     }
 
     .get-to-work-section .get-started-button {
@@ -870,7 +878,7 @@ body {
     margin: 40px auto;
     max-width: 1200px;
     overflow: hidden;
-    
+
 }
 
 .featured-description a {
@@ -995,6 +1003,9 @@ body {
     margin: 50px auto;
     max-width: 1400px;
     border-radius: 20px;
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .featured-section::before {
@@ -1051,21 +1062,30 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
 
 
 .card {
-     position: relative;
-    width: 380px;  
-    height: 580px;  
+    position: relative;
+    width: 380px;
+    height: 580px;
     border-radius: 24px;
     padding: 3px;
     overflow: hidden;
     transform-style: preserve-3d;
-    transition: transform 1.2s ease-out; 
+    transition: transform 1.2s ease-out;
+    /* box-shadow: 
+        0 0 10px 2px rgb(228, 57, 114),
+        0 0 20px 5px rgb(55, 33, 255),
+        0 0 30px 10px rgb(66, 133, 244);
+    transition: box-shadow 0.6s ease, transform 0.4s ease;  */
 }
+
 
 
 .card::before {
@@ -1091,6 +1111,7 @@ body {
         transform: rotate(360deg);
     }
 }
+
 .card-content {
     position: relative;
     z-index: 1;
@@ -1105,7 +1126,10 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 }
 
 /* Background image styling (more blurred and subtle) */
@@ -1119,6 +1143,7 @@ body {
     opacity: 0.15;
     filter: grayscale(1) blur(5px);
     
+
 }
 
 .card-image img {
@@ -1126,6 +1151,7 @@ body {
     height: 100%;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    
 }
 
 
@@ -1140,6 +1166,9 @@ body {
     color: #fff;
     margin: 0;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .card-title {
@@ -1148,6 +1177,9 @@ body {
     color: #b0aed6;
     margin: 5px 0 0;
     text-align: center;
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
@@ -1158,6 +1190,7 @@ body {
     justify-content: center;
     overflow: hidden;
     padding: 0 20px;
+    
 }
 
 .main-portrait img {
@@ -1167,6 +1200,7 @@ body {
     object-fit: contain;
     filter: grayscale(1);
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    
 }
 
 
@@ -1180,6 +1214,9 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-top: auto;
+     -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .footer-left {
@@ -1193,6 +1230,7 @@ body {
     height: 40px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    
 }
 
 .user-info {
@@ -1228,3 +1266,284 @@ body {
 }
 
 /* --- END: Updated Profile Card CSS --- */
+
+
+
+/* --- Collaboration Section --- */
+.collaboration-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.collaboration-section::selection {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+.collaboration-tag {
+    background-color: #1a1a1a;
+    color: #8c8c8c;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.collaboration-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 700px;
+}
+
+.collaboration-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #828282;
+    margin-bottom: 40px;
+    max-width: 650px;
+}
+
+.collaboration-button-container {
+    margin-top: 20px;
+}
+
+.collaboration-get-started-button {
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #232323;
+    background: #FFA116;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collaboration-get-started-button:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ffd000 100%);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .collaboration-section {
+        padding: 60px 15px;
+    }
+
+    .collaboration-heading {
+        font-size: 2.8rem;
+    }
+
+    .collaboration-description {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .collaboration-get-started-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .collaboration-heading {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+
+
+
+/* --- Code Showcase Section --- */
+.code-showcase-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #000;
+}
+
+.code-showcase-container {
+    width: 65%;
+    /* Adjusted width to make it smaller */
+    max-width: 1000px;
+    /* Max width to ensure it doesn't get too big on large screens */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    /* Center the container */
+}
+
+.code-showcase-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+    .code-showcase-container {
+        width: 80%;
+        /* Adjust for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .code-showcase-section {
+        padding: 40px 15px;
+    }
+
+    .code-showcase-container {
+        width: 90%;
+        /* Adjust for small screens */
+        border-radius: 8px;
+    }
+
+    .code-showcase-image {
+        border-radius: 8px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Code Showcase & Floating Cursors (FIXED) --- */
+
+.code-showcase-container {
+    position: relative;
+    width: 65%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.floating-cursors-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Base style - RENAMED */
+.floating-cursor {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    will-change: transform;
+}
+
+/* RENAMED */
+.floating-cursor svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* RENAMED */
+.floating-cursor .name {
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* James's Cursor - RENAMED */
+.floating-cursor.james {
+    top: 45%;
+    left: 30%;
+    animation: moveJames 10s ease-in-out infinite;
+}
+
+.floating-cursor.james .name {
+    background-color: #4F91FF;
+}
+
+
+/* RENAMED */
+.floating-cursor.james svg {
+    width: 81px;
+    height: 39px;
+}
+
+/* Emma's Cursor - RENAMED */
+.floating-cursor.emma {
+    top: 75%;
+    left: 70%;
+    animation: floatEmma 8s ease-in-out infinite;
+}
+
+/* RENAMED */
+.floating-cursor.emma .name {
+    background-color: #ec4899;
+}
+
+/* --- Animations (No changes needed here) --- */
+@keyframes moveJames {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-15px, 10px);
+    }
+
+    50% {
+        transform: translate(250px, 40px);
+    }
+
+    80% {
+        transform: translate(280px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Keyframe animation for Emma's diagonal float */
+@keyframes floatEmma {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        /* Now moves diagonally: 20px right and 25px up */
+        transform: translate(10px, -105px);
+    }
+}
