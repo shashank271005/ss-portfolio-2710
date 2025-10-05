@@ -732,7 +732,8 @@ body {
 .get-to-work-section .section-heading,
 .get-to-work-section .description-text,
 .get-to-work-section .secondary-text,
-.get-to-work-section .button-2 { /* UPDATED LINE */
+.get-to-work-section .button-2 {
+    /* UPDATED LINE */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -741,7 +742,8 @@ body {
 .get-to-work-section.is-visible .section-heading,
 .get-to-work-section.is-visible .description-text,
 .get-to-work-section.is-visible .secondary-text,
-.get-to-work-section.is-visible .button-2 { /* UPDATED LINE */
+.get-to-work-section.is-visible .button-2 {
+    /* UPDATED LINE */
     opacity: 1;
     transform: translateY(0);
 }
@@ -754,7 +756,8 @@ body {
     transition-delay: 0.3s;
 }
 
-.get-to-work-section.is-visible .button-2 { /* UPDATED LINE */
+.get-to-work-section.is-visible .button-2 {
+    /* UPDATED LINE */
     transition-delay: 0.4s;
 }
 
@@ -783,7 +786,7 @@ body {
     .get-to-work-section .secondary-text {
         font-size: 0.95rem;
         padding: 0 1rem;
-        /* Add horizontal padding for smaller screens */
+        
     }
 
     .get-to-work-section .get-started-button {
@@ -867,6 +870,7 @@ body {
     margin: 40px auto;
     max-width: 1200px;
     overflow: hidden;
+    
 }
 
 .featured-description a {
@@ -975,22 +979,24 @@ body {
 
 
 @keyframes rotate-legacy {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .featured-section {
-    position: relative; 
-    overflow: hidden; 
-    padding: 0.9px; 
+    position: relative;
+    overflow: hidden;
+    padding: 0.9px;
     margin: 50px auto;
     max-width: 1400px;
     border-radius: 20px;
 }
+
 .featured-section::before {
     content: '';
     position: absolute;
@@ -1000,26 +1006,24 @@ body {
     top: -50%;
     left: -50%;
 
-    
-    background: conic-gradient(
-      transparent 20%, 
-      #e43972 30%, 
-      #3721ff, 
-      #4285F4 90%, 
-      transparent 100%
-    );
-    
+
+    background: conic-gradient(transparent 20%,
+            #e43972 30%,
+            #3721ff,
+            #4285F4 90%,
+            transparent 100%);
+
     animation: rotate-legacy 10s linear infinite;
 }
 
 
 .featured-content-wrapper {
-    position: relative; 
+    position: relative;
     z-index: 1;
     background-color: #0d0d0d;
     padding: 80px 40px;
     border-radius: 18px;
-    
+
     display: flex;
     width: 100%;
     align-items: center;
@@ -1033,4 +1037,193 @@ body {
 
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+
+
+/* --- START: Profile Card CSS --- */
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+
+
+
+.card {
+     position: relative;
+    width: 380px;  
+    height: 580px;  
+    border-radius: 24px;
+    padding: 3px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1.2s ease-out; 
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent,
+            #3721ff,
+            #c45eff,
+            transparent 35%);
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.card-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/card-bg.png);
+    opacity: 100;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 22px;
+    color: #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Background image styling (more blurred and subtle) */
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    filter: grayscale(1) blur(5px);
+    
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.card-text-wrapper {
+    padding: 35px 35px 20px 35px;
+    text-align: center;
+}
+
+.card-name {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #b0aed6;
+    margin: 5px 0 0;
+    text-align: center;
+}
+
+
+.main-portrait {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.main-portrait img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.status {
+    font-size: 0.8rem;
+    color: #00ff88;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- END: Updated Profile Card CSS --- */
