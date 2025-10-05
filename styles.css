@@ -563,7 +563,7 @@ body {
     }
 }
 
-/* Styles for the LEFT interactive image */
+
 #left-interactive-image {
     position: absolute;
     width: 450px;
@@ -580,7 +580,7 @@ body {
     will-change: transform;
 }
 
-/* Styles for the RIGHT interactive image */
+
 #right-interactive-image {
     position: absolute;
     width: 450px;
@@ -597,7 +597,7 @@ body {
     will-change: transform;
 }
 
-/* Common styles for the actual image tags inside the containers */
+
 #left-interactive-image-img,
 #right-interactive-image-img {
     width: 100%;
@@ -606,7 +606,7 @@ body {
     border-radius: 12px;
 }
 
-/* --- New Image Showcase Section --- */
+
 .image-showcase-section {
     display: flex;
     justify-content: center;
@@ -622,7 +622,7 @@ body {
     user-select: none;
 }
 
-/* Merged the two rules into one */
+
 .image-showcase-section .image-container {
     position: relative;
     width: 80%;
@@ -633,7 +633,7 @@ body {
     transform: perspective(1000px);
 }
 
-/* Uncommented this rule to make the image responsive */
+
 .image-showcase-section .responsive-image {
     width: 100%;
     height: auto;
@@ -769,7 +769,7 @@ body {
     transition-delay: 0.4s;
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 992px) {
     .get-to-work-section .section-heading {
         font-size: 3rem;
@@ -1545,5 +1545,170 @@ body {
     50% {
         /* Now moves diagonally: 20px right and 25px up */
         transform: translate(10px, -105px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles for All Devices*/
+
+/* For tablets and smaller laptops (up to 992px)*/
+@media (max-width: 992px) {
+    /* --- Hero Section --- */
+    .hero span {
+        font-size: 4rem;
+    }
+    .hero {
+        font-size: 1.5rem;
+    }
+
+    /* --- Featured Section --- */
+    .featured-content-wrapper {
+        gap: 40px;
+        padding: 60px 30px;
+    }
+    .featured-heading {
+        font-size: 3rem;
+    }
+    
+    /* --- Get To Work Section --- */
+    .get-to-work-section .section-heading {
+        font-size: 3rem;
+    }
+}
+
+/* For most tablets and mobile phones (up to 768px)*/
+@media (max-width: 768px) {
+    /* --- Navigation Bar --- */
+    .nav-bar-row {
+        flex-wrap: wrap; 
+        justify-content: center;
+        top: 1rem;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    .glass-navbar {
+        order: 3; 
+        margin: 0.5rem auto 0; 
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-bar-logo {
+        position: static; 
+        margin: 0;
+    }
+    .nav-bar-btn .linkedin-btn,
+    .nav-bar-leetcode .leetcode-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* --- Hero Section --- */
+    .hero span {
+        font-size: 2.8rem;
+    }
+    .hero {
+        font-size: 1.2rem;
+    }
+    .hero-2 .text {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    /* --- Skills Terminal Section --- */
+    #left-interactive-image,
+    #right-interactive-image {
+        display: none; 
+    }
+    .terminal-window {
+        width: 95%;
+        max-width: 95%; 
+    }
+
+    /* --- Get To Work Section --- */
+    .get-to-work-section {
+        padding: 6rem 1rem;
+    }
+    .get-to-work-section .section-heading {
+        font-size: 2.5rem;
+    }
+
+    /* --- Featured Section --- */
+    .featured-content-wrapper {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    .featured-left-column {
+        padding-right: 0;
+    }
+    .featured-right-column {
+        max-width: 100%;
+        padding-left: 0;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .featured-heading {
+        font-size: 2.5rem;
+    }
+
+    /* --- Collaboration Section --- */
+    .collaboration-heading {
+        font-size: 2.8rem;
+    }
+    .collaboration-description {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    /* --- Code Showcase & Cursor Animations --- */
+    .code-showcase-container {
+        width: 90%;
+    }
+    @keyframes moveJames { 
+        0%   { transform: translate(0, 0); }
+        20%  { transform: translate(-5px, 5px); }
+        50%  { transform: translate(120px, 25px); }
+        80%  { transform: translate(130px, 15px); }
+        100% { transform: translate(0, 0); }
+    }
+}
+
+/* For smaller mobile phones (up to 480px)*/
+@media (max-width: 480px) {
+    /* --- Hero Section --- */
+    .hero span {
+        font-size: 2rem;
+    }
+    .hero {
+        font-size: 1rem;
+    }
+    .bottom-line {
+        line-height: 1.2;
+    }
+    .hero-2 .text {
+        font-size: 0.85rem;
+    }
+
+    /* --- Get To Work Section --- */
+    .get-to-work-section .section-heading {
+        font-size: 2rem;
+    }
+
+    /* --- Featured Section --- */
+    .featured-heading {
+        font-size: 2.2rem;
+    }
+
+    /* --- Collaboration Section --- */
+    .collaboration-heading {
+        font-size: 2.2rem;
     }
 }
