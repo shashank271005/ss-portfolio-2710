@@ -1596,6 +1596,7 @@ body {
         top: 1rem;
         padding: 0 1rem;
         gap: 1rem;
+        position:absolute;
     }
     .glass-navbar {
         order: 3; 
@@ -1686,6 +1687,15 @@ body {
 /* For smaller mobile phones (up to 480px)*/
 @media (max-width: 480px) {
     /* --- Hero Section --- */
+.nav-bar-row {
+        flex-wrap: wrap; 
+        justify-content: center;
+        top: 1rem;
+        padding: 0 1rem;
+        gap: 1rem;
+        position:absolute;
+    }
+
     .hero span {
         font-size: 2rem;
     }
@@ -1712,5 +1722,212 @@ body {
     /* --- Collaboration Section --- */
     .collaboration-heading {
         font-size: 2.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- Optimize Apps Section (New Section) --- */
+.RushHour-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; 
+    font-family: 'DM Sans', sans-serif; 
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-decoration: none !;
+}
+
+.RushHour-container {
+    width: 100%;
+    max-width: 1200px;
+    /* background-color: #0d0d0d; */
+    /* border-radius: 20px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.08); */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);  */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+}
+
+
+
+
+
+
+.RushHour-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    gap: 50px;
+}
+
+.RushHour-text {
+    flex: 1;
+    color: #fff;
+    text-align: left;
+}
+.RushHour-text p a {
+    text-decoration: none !important;
+}
+
+.RushHour-text .tag {
+    background-color: #1a1a1a;
+    color: #8c8c8c;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.RushHour-text h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.RushHour-text p {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.6;
+    color: #828282;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+
+.RushHour-text .highlight-link-2 {
+    color: #4285F4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.RushHour-text .highlight-link-2:hover {
+    text-decoration: none; 
+}
+
+.RushHour-text .know-more-button {
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #e43972;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.RushHour-text .know-more-button:hover {
+    color: #ffb14d; 
+}
+
+.RushHour-button-container {
+    text-decoration: none !important;
+}
+
+.highlight-link-2 {
+    color: #4285F4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.highlight-link-2:hover {
+    text-decoration: none;
+}
+
+.RushHour-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px; 
+}
+
+.RushHour-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
+}
+
+/* Responsive adjustments for the new section */
+@media (max-width: 992px) {
+    .RushHour-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        gap: 30px;
+    }
+    .RushHour-text {
+        text-align: center;
+    }
+    .RushHour-text h2 {
+        font-size: 2.8rem;
+    }
+    .RushHour-text p {
+        max-width: 100%;
+    }
+    .RushHour-image {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .RushHour-2 {
+        padding: 40px 15px;
+    }
+    .RushHour-container {
+        border-radius: 15px;
+    }
+    .RushHour-header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .Rushhour-header .tab {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .RushHour-content {
+        padding: 30px;
+    }
+    .RushHour-text h2 {
+        font-size: 2.2rem;
+    }
+    .RushHour-text p {
+        font-size: 0.9rem;
+    }
+    .RushHour-text .get-started-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .RushHour-header .tabs {
+        flex-direction: column;
+        width: 100%;
+    }
+    .RushHour-header .tab {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .RushHour-text h2 {
+        font-size: 1.8rem;
     }
 }
