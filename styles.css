@@ -4,7 +4,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-    
+
 }
 
 body {
@@ -15,14 +15,14 @@ body {
 
 /* --- HERO SECTION --- */
 .hero-wrapper {
-     position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .hero {
@@ -233,7 +233,7 @@ body {
     margin-left: auto;
     /* background: rgba(30, 30, 40, 0.45); */
     border-radius: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.18);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -1005,7 +1005,7 @@ body {
     margin: 50px auto;
     max-width: 1400px;
     border-radius: 20px;
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
@@ -1064,7 +1064,7 @@ body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
@@ -1120,7 +1120,7 @@ body {
     width: 100%;
     height: 100%;
     background-image: url(img/card-bg.png);
-    opacity: 100;
+    opacity: 1;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border-radius: 22px;
@@ -1128,7 +1128,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 
@@ -1144,7 +1144,7 @@ body {
     z-index: -1;
     opacity: 0.15;
     filter: grayscale(1) blur(5px);
-    
+
 
 }
 
@@ -1153,7 +1153,7 @@ body {
     height: 100%;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-    
+
 }
 
 
@@ -1168,7 +1168,7 @@ body {
     color: #fff;
     margin: 0;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
@@ -1179,7 +1179,7 @@ body {
     color: #b0aed6;
     margin: 5px 0 0;
     text-align: center;
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
@@ -1192,7 +1192,7 @@ body {
     justify-content: center;
     overflow: hidden;
     padding: 0 20px;
-    
+
 }
 
 .main-portrait img {
@@ -1202,7 +1202,7 @@ body {
     object-fit: contain;
     filter: grayscale(1);
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    
+
 }
 
 
@@ -1216,7 +1216,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin-top: auto;
-     -webkit-user-select: none;
+    -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
@@ -1232,7 +1232,7 @@ body {
     height: 40px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    
+
 }
 
 .user-info {
@@ -1564,10 +1564,12 @@ body {
 
 /* For tablets and smaller laptops (up to 992px)*/
 @media (max-width: 992px) {
+
     /* --- Hero Section --- */
     .hero span {
         font-size: 4rem;
     }
+
     .hero {
         font-size: 1.5rem;
     }
@@ -1577,10 +1579,11 @@ body {
         gap: 40px;
         padding: 60px 30px;
     }
+
     .featured-heading {
         font-size: 3rem;
     }
-    
+
     /* --- Get To Work Section --- */
     .get-to-work-section .section-heading {
         font-size: 3rem;
@@ -1589,25 +1592,29 @@ body {
 
 /* For most tablets and mobile phones (up to 768px)*/
 @media (max-width: 768px) {
+
     /* --- Navigation Bar --- */
     .nav-bar-row {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: center;
         top: 1rem;
         padding: 0 1rem;
         gap: 1rem;
-        position:absolute;
+        position: absolute;
     }
+
     .glass-navbar {
-        order: 3; 
-        margin: 0.5rem auto 0; 
+        order: 3;
+        margin: 0.5rem auto 0;
         width: 100%;
         justify-content: center;
     }
+
     .nav-bar-logo {
-        position: static; 
+        position: static;
         margin: 0;
     }
+
     .nav-bar-btn .linkedin-btn,
     .nav-bar-leetcode .leetcode-btn {
         width: 50px;
@@ -1618,9 +1625,11 @@ body {
     .hero span {
         font-size: 2.8rem;
     }
+
     .hero {
         font-size: 1.2rem;
     }
+
     .hero-2 .text {
         font-size: 0.9rem;
         padding: 0 1rem;
@@ -1629,17 +1638,19 @@ body {
     /* --- Skills Terminal Section --- */
     #left-interactive-image,
     #right-interactive-image {
-        display: none; 
+        display: none;
     }
+
     .terminal-window {
         width: 95%;
-        max-width: 95%; 
+        max-width: 95%;
     }
 
     /* --- Get To Work Section --- */
     .get-to-work-section {
         padding: 6rem 1rem;
     }
+
     .get-to-work-section .section-heading {
         font-size: 2.5rem;
     }
@@ -1649,15 +1660,18 @@ body {
         flex-direction: column;
         padding: 50px 20px;
     }
+
     .featured-left-column {
         padding-right: 0;
     }
+
     .featured-right-column {
         max-width: 100%;
         padding-left: 0;
         align-items: center;
         margin-top: 20px;
     }
+
     .featured-heading {
         font-size: 2.5rem;
     }
@@ -1666,6 +1680,7 @@ body {
     .collaboration-heading {
         font-size: 2.8rem;
     }
+
     .collaboration-description {
         font-size: 0.9rem;
         max-width: 90%;
@@ -1675,36 +1690,55 @@ body {
     .code-showcase-container {
         width: 90%;
     }
-    @keyframes moveJames { 
-        0%   { transform: translate(0, 0); }
-        20%  { transform: translate(-5px, 5px); }
-        50%  { transform: translate(120px, 25px); }
-        80%  { transform: translate(130px, 15px); }
-        100% { transform: translate(0, 0); }
+
+    @keyframes moveJames {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        20% {
+            transform: translate(-5px, 5px);
+        }
+
+        50% {
+            transform: translate(120px, 25px);
+        }
+
+        80% {
+            transform: translate(130px, 15px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
     }
 }
 
 /* For smaller mobile phones (up to 480px)*/
 @media (max-width: 480px) {
+
     /* --- Hero Section --- */
-.nav-bar-row {
-        flex-wrap: wrap; 
+    .nav-bar-row {
+        flex-wrap: wrap;
         justify-content: center;
         top: 1rem;
         padding: 0 1rem;
         gap: 1rem;
-        position:absolute;
+        position: absolute;
     }
 
     .hero span {
         font-size: 2rem;
     }
+
     .hero {
         font-size: 1rem;
     }
+
     .bottom-line {
         line-height: 1.2;
     }
+
     .hero-2 .text {
         font-size: 0.85rem;
     }
@@ -1738,8 +1772,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px; 
-    font-family: 'DM Sans', sans-serif; 
+    padding: 80px 20px;
+    font-family: 'DM Sans', sans-serif;
     margin-top: 60px;
     margin-bottom: 60px;
     text-decoration: none !;
@@ -1754,7 +1788,7 @@ body {
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);  */
     overflow: hidden;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 
@@ -1775,6 +1809,7 @@ body {
     color: #fff;
     text-align: left;
 }
+
 .RushHour-text p a {
     text-decoration: none !important;
 }
@@ -1815,7 +1850,7 @@ body {
 }
 
 .RushHour-text .highlight-link-2:hover {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .RushHour-text .know-more-button {
@@ -1831,7 +1866,7 @@ body {
 
 
 .RushHour-text .know-more-button:hover {
-    color: #ffb14d; 
+    color: #ffb14d;
 }
 
 .RushHour-button-container {
@@ -1853,7 +1888,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 400px; 
+    max-width: 400px;
 }
 
 .RushHour-image img {
@@ -1861,7 +1896,7 @@ body {
     height: auto;
     display: block;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive adjustments for the new section */
@@ -1872,15 +1907,19 @@ body {
         padding: 40px;
         gap: 30px;
     }
+
     .RushHour-text {
         text-align: center;
     }
+
     .RushHour-text h2 {
         font-size: 2.8rem;
     }
+
     .RushHour-text p {
         max-width: 100%;
     }
+
     .RushHour-image {
         max-width: 400px;
     }
@@ -1890,27 +1929,34 @@ body {
     .RushHour-2 {
         padding: 40px 15px;
     }
+
     .RushHour-container {
         border-radius: 15px;
     }
+
     .RushHour-header {
         padding: 10px 15px;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .Rushhour-header .tab {
         font-size: 0.9rem;
         padding: 8px 12px;
     }
+
     .RushHour-content {
         padding: 30px;
     }
+
     .RushHour-text h2 {
         font-size: 2.2rem;
     }
+
     .RushHour-text p {
         font-size: 0.9rem;
     }
+
     .RushHour-text .get-started-button {
         padding: 10px 25px;
         font-size: 0.9rem;
@@ -1922,12 +1968,181 @@ body {
         flex-direction: column;
         width: 100%;
     }
+
     .RushHour-header .tab {
         justify-content: center;
         width: 100%;
         box-sizing: border-box;
     }
+
     .RushHour-text h2 {
         font-size: 1.8rem;
     }
 }
+
+
+
+/* upar mat chedo all right till now */
+
+
+
+
+/* --- Eniginered-Aesthetcs Section --- */
+.Eniginered-Aesthetcs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.Eniginered-Aesthetcs-section::selection {
+    background: #ff9800;
+    color: #fff;
+}
+
+
+.Eniginered-Aesthetcs-tag {
+    background-color: #1a1a1a;
+    color: #8c8c8c;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.Eniginered-Aesthetcs-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 700px;
+}
+
+.Eniginered-Aesthetcs-description {
+    font-size: 1rem;
+    line-height: 1.1;
+    color: #828282;
+    margin-bottom: 40px;
+    max-width: 650px;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .Eniginered-Aesthetcs-section {
+        padding: 60px 15px;
+    }
+
+    .Eniginered-Aesthetcs-heading {
+        font-size: 2.8rem;
+    }
+
+    .Eniginered-Aesthetcs-description {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .Eniginered-Aesthetcs-heading {
+        font-size: 2.2rem;
+    }
+}
+
+
+
+
+/* --- 1. The New Continuous Background Wrapper --- */
+.continuous-background-wrapper {
+    z-index: 1;
+
+    width: fit-content;
+
+    position: absolute;
+    width: 100%;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.Eniginered-Aesthetcs-section,
+.innovate-with-firebase-section,
+.bottom-bg {
+
+    background: transparent;
+
+}
+
+.img-background {
+    width: 100vw;
+    height: calc();
+
+    position: absolute;
+    height: 100%;
+
+
+}
+
+
+
+.Eniginered-Aesthetcs-section {
+
+    padding: 80px 20px;
+}
+
+.innovate-with-firebase-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom-bg {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.work-flow-img {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add some responsive adjustments if needed */
+@media (max-width: 768px) {
+    .work-flow-img {
+        margin-top: 20px;
+        /* Reduce top margin on smaller screens */
+    }
+}
+
+
+
+
+

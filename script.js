@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (skillsSection) {
         observer.observe(skillsSection);
     }
-    
+
     /* ---------------- BACKGROUND DOTS ANIMATION ---------------- */
     const dotsContainer = document.querySelector('.background-dots-container');
     if (dotsContainer) {
