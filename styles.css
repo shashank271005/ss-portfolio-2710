@@ -2066,12 +2066,9 @@ body {
 /* --- 1. The New Continuous Background Wrapper --- */
 .continuous-background-wrapper {
     z-index: 1;
-
     width: fit-content;
-
     position: absolute;
     width: 100%;
-
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -2134,15 +2131,130 @@ body {
     margin-right: auto;
 }
 
-/* Add some responsive adjustments if needed */
+
 @media (max-width: 768px) {
     .work-flow-img {
         margin-top: 20px;
-        /* Reduce top margin on smaller screens */
+
     }
 }
 
 
 
 
+
+
+/* --- Innovate Section --- */
+
+
+
+/* --- Final Section --- */
+.final-section-container {
+    /* Set up the background image */
+    background-image: url('https://phg7ih4ayg.ucarecd.net/f0021aa7-e9ce-4ce4-bc3a-27372703f6e3/-/preview/1000x1000/');
+    background-size: cover;
+    background-position: center top;
+
+    /* Define the space and positioning context */
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+    /* Use Flexbox to center the main text content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 400px;
+}
+
+/* This is the "Engineer with Empathy" text block */
+.innovate-content {
+    color: white;
+    text-align: center;
+    max-width: 750px;
+    z-index: 2; /* Ensures text is above the background */
+    font-family: 'DM Sans', sans-serif;
+}
+.innovate-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+.innovate-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+.innovate-content .cta-button {
+    background-color: #ffffff;
+    color: #232323;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 22px;
+    font-size: 0.8rem;
+    font-weight: 550;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* This is the floating footer card */
+.site-footer-card {
+    
+    position: absolute;
+    /* bottom: 50px; */
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 3; 
+    background-color: #000;
+    color: #e0e0e0;
+    width: 95%;
+    max-width: 1300px;
+    padding: 1.5rem 2.5rem; /* Adjusted padding */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+.current-status {
+    font-size: 0.8rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #FFA116;
+    border-radius: 50%;
+    
+}
+
+
+
+
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .innovate-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .innovate-content p {
+        font-size: 1rem;
+    }
+
+    .innovate-content .cta-button {
+        padding: 14px 28px;
+    }
+}
 
