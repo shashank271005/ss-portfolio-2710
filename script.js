@@ -246,7 +246,10 @@ if (player) {
         { title: "Espresso", artist: "Sabrina Carpenter", src: "music/your-song-6.mp3", art: "https://phg7ih4ayg.ucarecd.net/ecde8135-1763-407b-9d0b-33f00bb3b63a/EspressoEnglish202420240412064803500x500.jpg" },
         { title: "Beautiful Things", artist: "Benson Boone ", src: "music/your-song-7.mp3", art: "https://phg7ih4ayg.ucarecd.net/340997ed-ea08-494c-9b27-7a8aa2676ea8/BeautifulThingsEnglish202420240404023143500x500.jpg" },
         { title: "Living Hell", artist: "Bella Poarch", src: "music/your-song-8.mp3", art: "https://phg7ih4ayg.ucarecd.net/ef31e45c-3fb0-4278-acc1-1f7333e5659c/DollsEPEnglish202220220809070445500x500.jpg" },
-        { title: "Worth It", artist: "Fifth Harmony ft. Kid Ink", src: "music/your-song-9.mp3", art: "https://phg7ih4ayg.ucarecd.net/48a1b16a-0f36-43e1-8123-6fe9dfb1a4f9/WorthItEnglish2015500x500.jpg" }
+        { title: "Worth It", artist: "Fifth Harmony ft. Kid Ink", src: "music/your-song-9.mp3", art: "https://phg7ih4ayg.ucarecd.net/48a1b16a-0f36-43e1-8123-6fe9dfb1a4f9/WorthItEnglish2015500x500.jpg" },
+        { title: "7 rings", artist: "Ariana Grande", src: "music/your-song-10.mp3", art: "https://phg7ih4ayg.ucarecd.net/36c43b18-5107-428c-90b5-787e135b9a78/thankunextEnglish201920231215000717500x500.jpg" },
+        { title: "Hey Mama", artist: "David Guetta", src: "music/your-song-11.mp3", art: "https://phg7ih4ayg.ucarecd.net/91c03e11-ecb6-4497-828f-4eb1361918e4/0e5ce9fa46148e0464e3376d2d060f11.jpg" }
+        
         
     ];
     let currentSongIndex = 0;
