@@ -242,7 +242,12 @@ if (player) {
         { title: "Ordinary", artist: "Alex Warren", src: "music/your-song-2.mp3", art: "https://phg7ih4ayg.ucarecd.net/cc49ae98-7fe0-4577-aa52-182f42de1c76/ab67616d00001e0242fe69c0e7e5c92f01ece8ce.jpeg" },
         { title: "I Warned Myself", artist: "Charlie Puth", src: "music/your-song-3.mp3", art: "https://phg7ih4ayg.ucarecd.net/bea1ea1f-fd03-4c22-b5cf-13c647b584b4/1200x630bf60.jpg" },
         { title: "I Like Me Better", artist: "Lauv", src: "music/your-song-4.mp3", art: "https://phg7ih4ayg.ucarecd.net/ee615889-0d08-497b-a387-35a7af980c51/ILikeMeBetterEnglish201720191202143751500x500.jpg" },
-        { title: "Monster", artist: "Justin Bieber & Shawn Mendes", src: "music/your-song-5.mp3", art: "https://phg7ih4ayg.ucarecd.net/d0f97bfc-35c7-4956-aa42-ffe42aabe1dd/Shawn_Mendes_and_Justin_Bieber__Monster.png" }
+        { title: "Monster", artist: "Justin Bieber & Shawn Mendes", src: "music/your-song-5.mp3", art: "https://phg7ih4ayg.ucarecd.net/d0f97bfc-35c7-4956-aa42-ffe42aabe1dd/Shawn_Mendes_and_Justin_Bieber__Monster.png" },
+        { title: "Espresso", artist: "Sabrina Carpenter", src: "music/your-song-6.mp3", art: "https://phg7ih4ayg.ucarecd.net/ecde8135-1763-407b-9d0b-33f00bb3b63a/EspressoEnglish202420240412064803500x500.jpg" },
+        { title: "Beautiful Things", artist: "Benson Boone ", src: "music/your-song-7.mp3", art: "https://phg7ih4ayg.ucarecd.net/340997ed-ea08-494c-9b27-7a8aa2676ea8/BeautifulThingsEnglish202420240404023143500x500.jpg" },
+        { title: "Living Hell", artist: "Bella Poarch", src: "music/your-song-8.mp3", art: "https://phg7ih4ayg.ucarecd.net/ef31e45c-3fb0-4278-acc1-1f7333e5659c/DollsEPEnglish202220220809070445500x500.jpg" },
+        { title: "Worth It", artist: "Fifth Harmony ft. Kid Ink", src: "music/your-song-9.mp3", art: "https://phg7ih4ayg.ucarecd.net/48a1b16a-0f36-43e1-8123-6fe9dfb1a4f9/WorthItEnglish2015500x500.jpg" }
+        
     ];
     let currentSongIndex = 0;
 
