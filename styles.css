@@ -2314,26 +2314,28 @@ body {
 
 
 
-
 .music-player {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 20px;
     gap: 12px;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 8px;
+    border-radius: 16px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    flex-shrink: 0;
 }
 
 .album-art {
-    width: 48px;
-    height: 48px;
-    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
+    margin-bottom: 8px;
 }
 
 .album-art img {
@@ -2343,25 +2345,27 @@ body {
 }
 
 .song-info {
+    text-align: center;
     font-family: 'DM Sans', sans-serif;
-    min-width: 100px;
 }
 
 .song-title {
     color: #f0f0f0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .song-artist {
     color: #888;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
 }
 
 .player-controls {
     display: flex;
     align-items: center;
-    gap: 4px;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
 }
 
 .control-btn {
@@ -2383,8 +2387,8 @@ body {
 }
 
 .control-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 .play-pause-btn .pause-icon {
