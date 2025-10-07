@@ -1330,7 +1330,7 @@ body {
     font-size: 1.05rem;
     font-weight: 500;
     color: #232323;
-    background: #FFA116;
+    background: linear-gradient(90deg, #FFA116 0%, #FFA116 100%);;
     border: none;
     border-radius: 40px;
     cursor: pointer;
@@ -2125,7 +2125,7 @@ body {
     height: auto;
     width: 100%;
     max-width: 900px;
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -2140,7 +2140,35 @@ body {
 }
 
 
+.Deployed-button-container {
+    margin-top: 20px;
+}
 
+.Deployed-button {
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-top: 4rem;
+    color: #232323;
+    background: linear-gradient(90deg, #FFA116 0%, #FFA116 100%);;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Deployed-button:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ffd000 100%);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .deployed-button {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+}
 
 
 
@@ -2150,29 +2178,22 @@ body {
 
 /* --- Final Section --- */
 .final-section-container {
-    /* Set up the background image */
     background-image: url('https://phg7ih4ayg.ucarecd.net/f0021aa7-e9ce-4ce4-bc3a-27372703f6e3/-/preview/1000x1000/');
     background-size: cover;
     background-position: center top;
-
-    /* Define the space and positioning context */
     min-height: 100vh;
     position: relative;
     box-sizing: border-box;
-
-    /* Use Flexbox to center the main text content */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 400px;
 }
-
-/* This is the "Engineer with Empathy" text block */
 .innovate-content {
     color: white;
     text-align: center;
     max-width: 750px;
-    z-index: 2; /* Ensures text is above the background */
+    z-index: 2; 
     font-family: 'DM Sans', sans-serif;
 }
 .innovate-content h2 {
@@ -2211,7 +2232,7 @@ body {
     color: #e0e0e0;
     width: 95%;
     max-width: 1300px;
-    padding: 1.5rem 2.5rem; /* Adjusted padding */
+    padding: 1.5rem 2.5rem; 
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
