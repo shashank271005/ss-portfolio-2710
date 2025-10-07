@@ -738,12 +738,10 @@ body {
 }
 
 /* --- "Get to Work" Animation Setup --- */
-/* --- "Get to Work" Animation Setup --- */
 .get-to-work-section .section-heading,
 .get-to-work-section .description-text,
 .get-to-work-section .secondary-text,
 .get-to-work-section .button-2 {
-    /* UPDATED LINE */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -753,7 +751,6 @@ body {
 .get-to-work-section.is-visible .description-text,
 .get-to-work-section.is-visible .secondary-text,
 .get-to-work-section.is-visible .button-2 {
-    /* UPDATED LINE */
     opacity: 1;
     transform: translateY(0);
 }
@@ -767,7 +764,6 @@ body {
 }
 
 .get-to-work-section.is-visible .button-2 {
-    /* UPDATED LINE */
     transition-delay: 0.4s;
 }
 
@@ -1134,7 +1130,7 @@ body {
 
 }
 
-/* Background image styling (more blurred and subtle) */
+/* Background image styling  */
 .card-image {
     position: absolute;
     top: 0;
@@ -1385,14 +1381,11 @@ body {
 
 .code-showcase-container {
     width: 65%;
-    /* Adjusted width to make it smaller */
     max-width: 1000px;
-    /* Max width to ensure it doesn't get too big on large screens */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
-    /* Center the container */
 }
 
 .code-showcase-image {
@@ -1406,7 +1399,6 @@ body {
 @media (max-width: 1024px) {
     .code-showcase-container {
         width: 80%;
-        /* Adjust for medium screens */
     }
 }
 
@@ -1417,7 +1409,6 @@ body {
 
     .code-showcase-container {
         width: 90%;
-        /* Adjust for small screens */
         border-radius: 8px;
     }
 
@@ -1456,7 +1447,6 @@ body {
     pointer-events: none;
 }
 
-/* Base style - RENAMED */
 .floating-cursor {
     position: absolute;
     display: flex;
@@ -1466,13 +1456,11 @@ body {
     will-change: transform;
 }
 
-/* RENAMED */
 .floating-cursor svg {
     width: 24px;
     height: 24px;
 }
 
-/* RENAMED */
 .floating-cursor .name {
     color: white;
     font-family: 'DM Sans', sans-serif;
@@ -1483,7 +1471,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* James's Cursor - RENAMED */
 .floating-cursor.james {
     top: 45%;
     left: 30%;
@@ -1495,25 +1482,21 @@ body {
 }
 
 
-/* RENAMED */
 .floating-cursor.james svg {
     width: 81px;
     height: 39px;
 }
 
-/* Emma's Cursor - RENAMED */
 .floating-cursor.emma {
     top: 75%;
     left: 70%;
     animation: floatEmma 8s ease-in-out infinite;
 }
 
-/* RENAMED */
 .floating-cursor.emma .name {
     background-color: #ec4899;
 }
 
-/* --- Animations (No changes needed here) --- */
 @keyframes moveJames {
     0% {
         transform: translate(0, 0);
@@ -1545,27 +1528,12 @@ body {
     }
 
     50% {
-        /* Now moves diagonally: 20px right and 25px up */
         transform: translate(10px, -105px);
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Responsive Styles for All Devices*/
-
-/* For tablets and smaller laptops (up to 992px)*/
 @media (max-width: 992px) {
 
-    /* --- Hero Section --- */
     .hero span {
         font-size: 4rem;
     }
@@ -1574,7 +1542,6 @@ body {
         font-size: 1.5rem;
     }
 
-    /* --- Featured Section --- */
     .featured-content-wrapper {
         gap: 40px;
         padding: 60px 30px;
@@ -1584,16 +1551,13 @@ body {
         font-size: 3rem;
     }
 
-    /* --- Get To Work Section --- */
     .get-to-work-section .section-heading {
         font-size: 3rem;
     }
 }
 
-/* For most tablets and mobile phones (up to 768px)*/
 @media (max-width: 768px) {
 
-    /* --- Navigation Bar --- */
     .nav-bar-row {
         flex-wrap: wrap;
         justify-content: center;
@@ -1621,7 +1585,6 @@ body {
         height: 50px;
     }
 
-    /* --- Hero Section --- */
     .hero span {
         font-size: 2.8rem;
     }
@@ -1635,7 +1598,6 @@ body {
         padding: 0 1rem;
     }
 
-    /* --- Skills Terminal Section --- */
     #left-interactive-image,
     #right-interactive-image {
         display: none;
@@ -1646,7 +1608,6 @@ body {
         max-width: 95%;
     }
 
-    /* --- Get To Work Section --- */
     .get-to-work-section {
         padding: 6rem 1rem;
     }
@@ -1655,7 +1616,6 @@ body {
         font-size: 2.5rem;
     }
 
-    /* --- Featured Section --- */
     .featured-content-wrapper {
         flex-direction: column;
         padding: 50px 20px;
@@ -1676,7 +1636,6 @@ body {
         font-size: 2.5rem;
     }
 
-    /* --- Collaboration Section --- */
     .collaboration-heading {
         font-size: 2.8rem;
     }
@@ -1686,7 +1645,6 @@ body {
         max-width: 90%;
     }
 
-    /* --- Code Showcase & Cursor Animations --- */
     .code-showcase-container {
         width: 90%;
     }
@@ -1714,10 +1672,8 @@ body {
     }
 }
 
-/* For smaller mobile phones (up to 480px)*/
 @media (max-width: 480px) {
 
-    /* --- Hero Section --- */
     .nav-bar-row {
         flex-wrap: wrap;
         justify-content: center;
@@ -1743,31 +1699,19 @@ body {
         font-size: 0.85rem;
     }
 
-    /* --- Get To Work Section --- */
     .get-to-work-section .section-heading {
         font-size: 2rem;
     }
 
-    /* --- Featured Section --- */
     .featured-heading {
         font-size: 2.2rem;
     }
 
-    /* --- Collaboration Section --- */
     .collaboration-heading {
         font-size: 2.2rem;
     }
 }
 
-
-
-
-
-
-
-
-
-/* --- Optimize Apps Section (New Section) --- */
 .RushHour-2 {
     display: flex;
     justify-content: center;
@@ -1899,7 +1843,6 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive adjustments for the new section */
 @media (max-width: 992px) {
     .RushHour-content {
         flex-direction: column;
@@ -1986,8 +1929,6 @@ body {
 
 
 
-
-/* --- Eniginered-Aesthetcs Section --- */
 .Eniginered-Aesthetcs-section {
     display: flex;
     flex-direction: column;
@@ -2038,7 +1979,6 @@ body {
 }
 
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .Eniginered-Aesthetcs-section {
         padding: 60px 15px;
@@ -2061,9 +2001,6 @@ body {
 }
 
 
-
-
-/* --- 1. The New Continuous Background Wrapper --- */
 .continuous-background-wrapper {
     z-index: 1;
     width: fit-content;
@@ -2162,7 +2099,6 @@ body {
     background: linear-gradient(90deg, #ff9800 0%, #ffd000 100%);
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .deployed-button {
         padding: 12px 28px;
@@ -2171,12 +2107,6 @@ body {
 }
 
 
-
-/* --- Innovate Section --- */
-
-
-
-/* --- Final Section --- */
 .final-section-container {
     background-image: url('https://phg7ih4ayg.ucarecd.net/f0021aa7-e9ce-4ce4-bc3a-27372703f6e3/-/preview/1000x1000/');
     background-size: cover;
@@ -2219,7 +2149,6 @@ body {
 }
 
 
-/* This is the floating footer card */
 .site-footer-card {
     
     position: absolute;
@@ -2259,12 +2188,6 @@ body {
     
 }
 
-
-
-
-
-
-/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .innovate-content h2 {
         font-size: 2.8rem;
