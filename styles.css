@@ -2505,3 +2505,25 @@ body {
 .owner-name a:hover {
     color: #fff;
 }
+
+
+
+@media (max-width: 768px) {
+    .credit-footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .credit-footer {
+        padding: 1.5rem 1rem; 
+    }
+
+    .credit-text,
+    .owner-name {
+        font-size: 0.8rem; 
+    }
+}
