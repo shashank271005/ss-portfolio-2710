@@ -2402,3 +2402,53 @@ body {
 .play-pause-btn.playing .play-icon {
     display: none;
 }
+
+
+@media (max-width: 992px) {
+    .site-footer-card .footer-main-content {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-main-content {
+        gap: 2rem;
+    }
+
+    .footer-links-grid {
+        gap: 1.5rem;
+    }
+
+    .footer-column h3,
+    .footer-column a {
+        font-size: 0.85rem;
+    }
+
+    .music-player {
+        width: 90%;
+    }
+}
