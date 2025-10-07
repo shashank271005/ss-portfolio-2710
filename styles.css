@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Mozilla+Text:wght@200..700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -13,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- HERO SECTION --- */
 .hero-wrapper {
     position: absolute;
     top: 50%;
@@ -189,8 +189,6 @@ body {
     user-select: none;
 }
 
-
-/* --- NAVIGATION BAR --- */
 .nav-bar-row {
     position: fixed;
     top: 2rem;
@@ -211,8 +209,6 @@ body {
     left: 0;
     z-index: -1;
     cursor: pointer;
-    /* border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 45%; */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -231,7 +227,6 @@ body {
 
 .glass-navbar {
     margin-left: auto;
-    /* background: rgba(30, 30, 40, 0.45); */
     border-radius: 40px;
     border: 1.5px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.18);
@@ -341,7 +336,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* --- SKILLS & TERMINAL SECTION --- */
 .background-dots-container {
     position: absolute;
     top: 0;
@@ -521,7 +515,6 @@ body {
     color: #58a6ff;
 }
 
-/* --- ANIMATIONS --- */
 @keyframes smooth-shake {
 
     10%,
@@ -618,7 +611,6 @@ body {
     background-color: transparent;
     margin-top: 5vh;
     margin-bottom: 2vh;
-    /* REDUCED from 5vh */
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -656,12 +648,6 @@ body {
 
 /* upar ka sab fixed hai, mt chedo */
 
-
-
-
-
-
-/* --- Get To Work Section --- */
 .get-to-work-section {
     display: flex;
     flex-direction: column;
@@ -671,9 +657,6 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'DM Sans';
-    /* -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none; */
 }
 
 .get-to-work-section::selection {
@@ -737,7 +720,6 @@ body {
 
 }
 
-/* --- "Get to Work" Animation Setup --- */
 .get-to-work-section .section-heading,
 .get-to-work-section .description-text,
 .get-to-work-section .secondary-text,
@@ -812,14 +794,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
 .button-2 {
     margin-top: 1rem;
     display: flex;
@@ -853,10 +827,6 @@ body {
 .button-2 button:hover {
     background: linear-gradient(90deg, #ff9800 0%, #ffd000 100%);
 }
-
-
-/* --- Featured Section --- */
-
 
 :root {
     --featured-border-color: #2e2e2e;
@@ -979,11 +949,6 @@ body {
     max-width: 50%;
 }
 
-
-
-
-
-
 @keyframes rotate-legacy {
     0% {
         transform: rotate(0deg);
@@ -1039,20 +1004,6 @@ body {
     gap: 60px;
 }
 
-
-
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-
-
-
-/* --- START: Profile Card CSS --- */
 .profile-card {
     display: flex;
     justify-content: center;
@@ -1076,12 +1027,6 @@ body {
     padding: 3px;
     overflow: hidden;
     transform-style: preserve-3d;
-    transition: transform 1.2s ease-out;
-    /* box-shadow: 
-        0 0 10px 2px rgb(228, 57, 114),
-        0 0 20px 5px rgb(55, 33, 255),
-        0 0 30px 10px rgb(66, 133, 244);
-    transition: box-shadow 0.6s ease, transform 0.4s ease;  */
 }
 
 
@@ -1130,7 +1075,6 @@ body {
 
 }
 
-/* Background image styling  */
 .card-image {
     position: absolute;
     top: 0;
@@ -1263,11 +1207,6 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- END: Updated Profile Card CSS --- */
-
-
-
-/* --- Collaboration Section --- */
 .collaboration-section {
     display: flex;
     flex-direction: column;
@@ -1338,7 +1277,6 @@ body {
     background: linear-gradient(90deg, #ff9800 0%, #ffd000 100%);
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .collaboration-section {
         padding: 60px 15px;
@@ -1365,12 +1303,6 @@ body {
     }
 }
 
-
-
-
-
-
-/* --- Code Showcase Section --- */
 .code-showcase-section {
     display: flex;
     justify-content: center;
@@ -1416,18 +1348,6 @@ body {
         border-radius: 8px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/* --- Code Showcase & Floating Cursors (FIXED) --- */
 
 .code-showcase-container {
     position: relative;
@@ -1519,7 +1439,6 @@ body {
     }
 }
 
-/* Keyframe animation for Emma's diagonal float */
 @keyframes floatEmma {
 
     0%,
@@ -1726,19 +1645,10 @@ body {
 .RushHour-container {
     width: 100%;
     max-width: 1200px;
-    /* background-color: #0d0d0d; */
-    /* border-radius: 20px; */
-    /* border: 1px solid rgba(255, 255, 255, 0.08); */
-    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);  */
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
 
 .RushHour-content {
     display: flex;
@@ -2152,7 +2062,6 @@ body {
 .site-footer-card {
     
     position: absolute;
-    /* bottom: 50px; */
     top: 80%;
     left: 50%;
     transform: translateX(-50%); 
