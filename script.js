@@ -221,6 +221,72 @@ if (cardWrapper) {
     });
 }
 
+/* ---------------- MUSIC PLAYER ---------------- */
+const player = document.querySelector('.music-player');
+if (player) {
+    const audio = document.getElementById('audio-source');
+    const playPauseBtn = player.querySelector('.play-pause-btn');
+    const prevBtn = player.querySelector('#prev-btn');
+    const nextBtn = player.querySelector('#next-btn');
+    const albumArt = player.querySelector('.album-art img');
+    const songTitle = player.querySelector('.song-title');
+    const songArtist = player.querySelector('.song-artist');
+
+    const playlist = [
+        { title: "Comethru", artist: "Jeremy Zucker", src: "music/your-song-1.mp3", art: "https://phg7ih4ayg.ucarecd.net/6638e53c-d780-4c0d-ab33-37a33a86ec78/comethrualnumcover.jpg" },
+        { title: "Ordinary", artist: "Alex Warren", src: "music/your-song-2.mp3", art: "https://phg7ih4ayg.ucarecd.net/cc49ae98-7fe0-4577-aa52-182f42de1c76/ab67616d00001e0242fe69c0e7e5c92f01ece8ce.jpeg" },
+        { title: "I Warned Myself", artist: "Charlie Puth", src: "music/your-song-3.mp3", art: "https://phg7ih4ayg.ucarecd.net/bea1ea1f-fd03-4c22-b5cf-13c647b584b4/1200x630bf60.jpg" },
+        { title: "I Like Me Better", artist: "Lauv", src: "music/your-song-4.mp3", art: "https://phg7ih4ayg.ucarecd.net/ee615889-0d08-497b-a387-35a7af980c51/ILikeMeBetterEnglish201720191202143751500x500.jpg" },
+        { title: "Monster", artist: "Justin Bieber & Shawn Mendes", src: "music/your-song-5.mp3", art: "https://phg7ih4ayg.ucarecd.net/d0f97bfc-35c7-4956-aa42-ffe42aabe1dd/Shawn_Mendes_and_Justin_Bieber__Monster.png" }
+    ];
+    let currentSongIndex = 0;
+
+    function loadSong(song) {
+        if (!song) return;
+        songTitle.textContent = song.title;
+        songArtist.textContent = song.artist;
+        albumArt.src = song.art;
+        audio.src = song.src;
+    }
+
+    async function playSong() {
+        try {
+            await audio.play();
+            playPauseBtn.classList.add('playing');
+        } catch (err) {
+            console.error("Audio play failed. This might be due to browser autoplay restrictions.", err);
+        }
+    }
+
+    function pauseSong() {
+        audio.pause();
+        playPauseBtn.classList.remove('playing');
+    }
+
+    function playNext() {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        loadSong(playlist[currentSongIndex]);
+        playSong();
+    }
+
+    function playPrev() {
+        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        loadSong(playlist[currentSongIndex]);
+        playSong();
+    }
+    
+    if (playPauseBtn && nextBtn && prevBtn) {
+        playPauseBtn.addEventListener('click', () => { audio.paused ? playSong() : pauseSong(); });
+        nextBtn.addEventListener('click', playNext);
+        prevBtn.addEventListener('click', playPrev);
+        audio.addEventListener('ended', playNext);
+        loadSong(playlist[currentSongIndex]);
+    } else {
+        console.error("Music player buttons could not be found! Please check your HTML for typos in the class or ID names.");
+    }
+}
+
+
 /* ---------------- TERMINAL SCALING ON SCROLL ---------------- */
 document.addEventListener('scroll', () => {
     const terminal = document.querySelector('.terminal-window');
@@ -327,3 +393,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('touchend', dragEnd);
     }
 });
+
