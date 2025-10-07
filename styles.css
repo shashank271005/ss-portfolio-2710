@@ -2452,3 +2452,56 @@ body {
         width: 90%;
     }
 }
+
+
+
+.credit-footer {
+    padding: 0rem 1.5rem;
+    text-align: center;
+}
+
+.credit-text {
+    margin: 0;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.credit-text a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credit-text a:hover {
+    color: #fff;
+}
+
+
+
+.owner {
+    padding: 0.2rem 1.5rem;
+    text-align: center;
+
+}
+
+.owner-name {
+    margin: 0;
+    color: #000000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.owner-name a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.owner-name a:hover {
+    color: #fff;
+}
