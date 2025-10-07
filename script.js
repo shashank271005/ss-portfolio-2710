@@ -227,7 +227,7 @@ if (getToWorkSection) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // --- (Your existing code) ---
+    
 
     /* ---------------- DRAGGABLE IMAGE STACK (RE-STACKING LOGIC) ---------------- */
     const imageStack = document.querySelector('.RushHour-image');
@@ -238,15 +238,13 @@ document.addEventListener('DOMContentLoaded', function () {
         let startX, startY, posX, posY;
 
         function dragStart(e) {
-            // Find the top-most card in the stack
             const topCard = imageStack.querySelector('.image-card:last-child');
-            // Check if the clicked element is the top card
             if (e.target.closest('.image-card') !== topCard) return;
 
             activeCard = topCard;
             isDragging = true;
             activeCard.classList.add('is-dragging');
-            activeCard.style.transition = 'none'; // Disable transition while dragging for instant feedback
+            activeCard.style.transition = 'none'; 
 
             startX = e.pageX || e.touches[0].pageX;
             startY = e.pageY || e.touches[0].pageY;
@@ -262,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function () {
             posX = currentX - startX;
             posY = currentY - startY;
 
-            // Move the card with the cursor
+    
             activeCard.style.transform = `translate(${posX}px, ${posY}px) rotate(${posX * 0.05}deg)`;
         }
 
@@ -271,23 +269,23 @@ document.addEventListener('DOMContentLoaded', function () {
             isDragging = false;
             activeCard.classList.remove('is-dragging');
             
-            // Re-enable the transition for the snap-back animation
+           
             activeCard.style.transition = 'transform 0.4s ease-out';
             
-            const dragThreshold = activeCard.offsetWidth * 0.5; // Must drag 50% of card width
+            const dragThreshold = activeCard.offsetWidth * 0.5; 
 
             if (Math.abs(posX) > dragThreshold) {
-                // If dragged far enough, move the card to the back of the stack
+                
                 imageStack.prepend(activeCard);
             }
 
-            // Reset the card's transform style to let the CSS (:nth-child) rules take over
+            
             activeCard.style.transform = '';
             
-            activeCard = null; // Clear the active card
+            activeCard = null; 
         }
 
-        // Add event listeners to the parent container
+       
         imageStack.addEventListener('mousedown', dragStart);
         imageStack.addEventListener('touchstart', dragStart, { passive: true });
         
