@@ -190,6 +190,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+const cardWrapper = document.querySelector('.card-transform-wrapper');
+
+if (cardWrapper) {
+    const card = cardWrapper.querySelector('.card');
+    const cardText = card.querySelector('.card-text-wrapper');
+    const cardImage = card.querySelector('.main-portrait');
+    const intensity = 20;
+    const parallaxIntensity = 8;
+
+    cardWrapper.addEventListener('mousemove', (e) => {
+        const rect = cardWrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        const rotateY = (x / (rect.width / 2)) * intensity;
+        const rotateX = -(y / (rect.height / 2)) * intensity;
+        const parallaxX = -(x / (rect.width / 2)) * parallaxIntensity;
+        const parallaxY = -(y / (rect.height / 2)) * parallaxIntensity;
+
+        if (card) card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        if (cardText) cardText.style.transform = `translateX(${parallaxX}px) translateY(${parallaxY}px)`;
+        if (cardImage) cardImage.style.transform = `translateX(${parallaxX * 0.7}px) translateY(${parallaxY * 0.7}px)`;
+    });
+
+    cardWrapper.addEventListener('mouseleave', () => {
+        if (card) card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        if (cardText) cardText.style.transform = 'translateX(0) translateY(0)';
+        if (cardImage) cardImage.style.transform = 'translateX(0) translateY(0)';
+    });
+}
+
 /* ---------------- TERMINAL SCALING ON SCROLL ---------------- */
 document.addEventListener('scroll', () => {
     const terminal = document.querySelector('.terminal-window');
