@@ -231,6 +231,11 @@ if (player) {
     const albumArt = player.querySelector('.album-art img');
     const songTitle = player.querySelector('.song-title');
     const songArtist = player.querySelector('.song-artist');
+    const progressContainer = player.querySelector('.progress-container');
+    const progressBar = player.querySelector('.progress-bar');
+    const currentTimeEl = player.querySelector('.current-time');
+    const totalDurationEl = player.querySelector('.total-duration');
+
 
     const playlist = [
         { title: "Comethru", artist: "Jeremy Zucker", src: "music/your-song-1.mp3", art: "https://phg7ih4ayg.ucarecd.net/6638e53c-d780-4c0d-ab33-37a33a86ec78/comethrualnumcover.jpg" },
@@ -274,12 +279,46 @@ if (player) {
         loadSong(playlist[currentSongIndex]);
         playSong();
     }
+
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
+    
+
+    function updateProgress() {
+        const { duration, currentTime } = audio;
+        const progressPercent = (currentTime / duration) * 100;
+        progressBar.style.width = `${progressPercent}%`;
+
+
+        currentTimeEl.textContent = formatTime(currentTime);
+    }
+
+    function setDuration() {
+        totalDurationEl.textContent = formatTime(audio.duration);
+    }
+
+    function setProgress(e) {
+        const width = this.clientWidth;
+        const clickX = e.offsetX;
+        const duration = audio.duration;
+
+        audio.currentTime = (clickX / width) * duration;
+    }
+
     
     if (playPauseBtn && nextBtn && prevBtn) {
         playPauseBtn.addEventListener('click', () => { audio.paused ? playSong() : pauseSong(); });
         nextBtn.addEventListener('click', playNext);
         prevBtn.addEventListener('click', playPrev);
+        audio.addEventListener('timeupdate', updateProgress);
+        audio.addEventListener('loadedmetadata', setDuration);
+        progressContainer.addEventListener('click', setProgress);
         audio.addEventListener('ended', playNext);
+        
         loadSong(playlist[currentSongIndex]);
     } else {
         console.error("Music player buttons could not be found! Please check your HTML for typos in the class or ID names.");
