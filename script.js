@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', event => event.preventDefault()); /* disabled right click */
+
 document.addEventListener('DOMContentLoaded', function () {
     /* ---------------- ICON CYCLE ---------------- */
     const icons = document.querySelectorAll('.icon-cycle .icon');
