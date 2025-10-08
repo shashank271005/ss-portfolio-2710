@@ -131,7 +131,8 @@ body {
         margin-top: 5rem;
     }
 
-    .icon-cycle, .icon-bg {
+    .icon-cycle,
+    .icon-bg {
         width: 50px;
         height: 50px;
     }
@@ -220,7 +221,7 @@ body {
         margin-top: 2rem;
         padding: 0 20px;
     }
-    
+
     .hero-2 .text {
         font-size: 0.95rem;
         line-height: 1.5;
@@ -404,7 +405,7 @@ body {
         gap: 10px;
         order: 2;
     }
-    
+
     .nav-bar-btn .linkedin-btn,
     .nav-bar-leetcode .leetcode-btn {
         width: 44px;
@@ -427,7 +428,7 @@ body {
         margin: 1rem auto 0;
         padding: 0.5rem 1.5rem;
     }
-    
+
     .glass-navbar li {
         font-size: 0.9rem;
     }
@@ -1256,11 +1257,13 @@ body {
         margin-left: 15px;
         margin-right: 15px;
     }
-     .card {
+
+    .card {
         width: 100%;
         max-width: 340px;
         height: 540px;
     }
+
     .card-name {
         font-size: 2.2rem;
     }
@@ -1493,16 +1496,65 @@ body {
 
 @media (max-width: 768px) {
     .code-showcase-section {
-        padding: 40px 15px;
+        padding: 4rem 20px;
     }
 
     .code-showcase-container {
-        width: 90%;
+        width: 95%;
         border-radius: 8px;
     }
 
     .code-showcase-image {
         border-radius: 8px;
+    }
+
+    .floating-cursor.james {
+        top: 35%;
+        left: 30%;
+    }
+
+    .floating-cursor.emma {
+        top: 65%;
+        left: 45%;
+    }
+
+    .floating-cursor .name {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .floating-cursor svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .floating-cursor.james svg {
+        width: 50px;
+        height: 24px;
+    }
+
+    @keyframes moveJames {
+
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(40px, 15px);
+        }
+    }
+
+    @keyframes floatEmma {
+
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(5px, -50px);
+        }
     }
 }
 
@@ -1978,7 +2030,61 @@ body {
         padding: 10px 25px;
         font-size: 0.9rem;
     }
+
+    .RushHour-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 5 / 3;
+    }
 }
+
+@media (max-width: 768px) {
+
+    .RushHour-text {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .RushHour-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .RushHour-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        max-width: 500px;
+        margin: 0 auto 2rem auto;
+
+    }
+
+    .RushHour-text .know-more-link {
+        font-size: 0.95rem;
+    }
+
+    .RushHour-image .image-card {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .RushHour-image .image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .RushHour-image {
+        position: relative;
+        margin: 3rem auto;
+        max-width: 300px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .RushHour-header .tabs {
@@ -2201,7 +2307,7 @@ body {
     align-items: center;
     gap: 0.3rem;
     padding: 8rem 2rem;
-    padding-bottom: 2rem; 
+    padding-bottom: 2rem;
 }
 
 .innovate-content {
@@ -2636,7 +2742,7 @@ body {
         padding: 1.5rem 1rem;
         padding-right: 0%;
     }
-    
+
     .footer-main-content {
         gap: 2rem;
     }
@@ -2721,12 +2827,12 @@ body {
 
 @media (max-width: 480px) {
     .credit-footer {
-        padding: 1.5rem 1rem; 
+        padding: 1.5rem 1rem;
     }
 
     .credit-text,
     .owner-name {
-        font-size: 0.8rem; 
+        font-size: 0.8rem;
     }
 }
 
