@@ -2680,6 +2680,35 @@ body {
     display: none;
 }
 
+
+@media (max-width: 768px) {
+
+    .music-player {
+        width: calc(100% - 30px);
+        max-width: 260px;
+        padding: 12px;
+    }
+
+    .album-art {
+        width: 120px;
+        height: 120px;
+    }
+
+    .song-title {
+        font-size: 0.95rem;
+    }
+
+    .song-artist {
+        font-size: 0.8rem;
+    }
+
+    .song-details {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
 /* --- New Styles for Seek Bar --- */
 .progress-container {
     width: 100%;
