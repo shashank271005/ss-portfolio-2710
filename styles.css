@@ -1106,7 +1106,7 @@ body {
 .card,
 .card-text-wrapper,
 .main-portrait {
-    transition: transform 0.6s ease;
+    transition: transform 0.4s ease;
 }
 
 .card-name {
@@ -2178,7 +2178,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     cursor: grab;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.4s ease-out;
 }
 
 .image-card img {
@@ -2201,6 +2201,22 @@ body {
 .image-card:nth-child(3) {
     transform: rotate(-2deg);
     z-index: 3;
+}
+
+.RushHour-image:hover .image-card:nth-child(1) {
+    transform: translate(-30px, 0) rotate(-8deg);
+}
+
+.RushHour-image:hover .image-card:nth-child(2) {
+    transform: translate(0, 0) rotate(4deg);
+}
+
+.RushHour-image:hover .image-card:nth-child(3) {
+    transform: translate(30px, 0) rotate(8deg);
+}
+
+.RushHour-image:hover .image-card.is-dragging {
+    transform: none;
 }
 
 
