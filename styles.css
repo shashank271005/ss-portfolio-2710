@@ -253,6 +253,7 @@ body {
 
 .nav-bar-logo {
     position: absolute;
+    flex-shrink: 0;
     margin: 40px;
     top: -1;
     left: 0;
@@ -1683,6 +1684,31 @@ body {
         font-size: 3rem;
     }
 }
+
+@media (min-width: 769px) {
+
+    .nav-bar-row {
+        display: flex !important;
+        align-items: center !important;
+        gap: 1.5rem !important;
+    }
+
+    .nav-bar-logo {
+        position: static !important;
+        margin: 0 !important;
+    }
+
+    .glass-navbar {
+        margin-left: auto !important;
+    }
+
+    .nav-bar-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+}
+
 
 @media (max-width: 768px) {
 
