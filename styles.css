@@ -825,7 +825,7 @@ body {
 .get-to-work-section .secondary-text,
 .get-to-work-section .button-2 {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -838,15 +838,15 @@ body {
 }
 
 .get-to-work-section.is-visible .description-text {
-    transition-delay: 0.2s;
-}
-
-.get-to-work-section.is-visible .secondary-text {
     transition-delay: 0.3s;
 }
 
+.get-to-work-section.is-visible .secondary-text {
+    transition-delay: 0.5s;
+}
+
 .get-to-work-section.is-visible .button-2 {
-    transition-delay: 0.4s;
+    transition-delay: 0.7s;
 }
 
 
