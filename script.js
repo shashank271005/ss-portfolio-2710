@@ -442,4 +442,3 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('touchend', dragEnd);
     }
 });
-
