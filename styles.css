@@ -2963,3 +2963,55 @@ body {
         padding: 1.5rem 1rem;
     }
 }
+
+
+
+
+
+
+.theme-toggle-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.09rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: 1rem;
+    color: var(--icon-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.theme-toggle-button svg {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle-button .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.theme-toggle-button .sun-icon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+[data-theme="dark"] .theme-toggle-button .moon-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+[data-theme="dark"] .theme-toggle-button .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
