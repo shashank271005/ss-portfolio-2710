@@ -3119,6 +3119,7 @@ body {
     
     .showcase-header h1 {
         font-size: 2.5rem;
+        padding-top: 2.5rem;
     }
 
     .showcase-container {
