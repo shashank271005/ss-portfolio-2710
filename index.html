@@ -51,9 +51,8 @@
                 <div class="glass-navbar">
                     <ul>
                         <li class="active"><a href="index.html"><span class="dot"></span> Home</a></li>
-                        <li class="doc"><a
-                                href="https://heyzine.com/flip-book/edc99320e8.html"
-                                target="_blank" rel="noopener noreferrer">Docs</a></li>
+                        <li class="doc"><a href="https://heyzine.com/flip-book/edc99320e8.html" target="_blank"
+                                rel="noopener noreferrer">Docs</a></li>
 
                         <li><a href="showcase.html">Showcase</a></li>
                         <li>
@@ -523,63 +522,7 @@
                     </div>
                     <div class="footer-bottom">
                         <span class="google-devs"></span>
-                        <div class="footer-legal-links">
-
-                            <div class="music-player">
-                                <audio id="audio-source" src="music/your-song.mp3"></audio>
-                                <div class="album-art">
-                                    <img src="img/album-cover-1.png" alt="Album Art">
-                                </div>
-                                <div class="song-info">
-                                    <div class="song-title">Mirage</div>
-                                    <div class="song-artist">Else</div>
-                                </div>
-
-                                <div class="progress-container">
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="time-stamps">
-                                    <span class="current-time">0:00</span>
-                                    <span class="total-duration">0:00</span>
-                                </div>
-
-                                <div class="player-controls">
-
-                                    <button id="prev-btn" class="control-btn" aria-label="Previous">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                                            <path fill-rule="evenodd"
-                                                d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                                        </svg>
-                                    </button>
-
-                                    <button class="control-btn play-pause-btn" aria-label="Play/Pause">
-                                        <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 5.14v14l11-7-11-7Z" fill="currentColor" />
-                                        </svg>
-                                        <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 19h4V5H6v14Zm8-14v14h4V5h-4Z" fill="currentColor" />
-                                        </svg>
-
-                                    </button>
-
-                                    <button id="next-btn" class="control-btn" aria-label="Next">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
-                                            <path fill-rule="evenodd"
-                                                d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
-                                        </svg>
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
+                        <div class="footer-legal-links"></div>
 
 
                     </div>
@@ -629,6 +572,55 @@
             </div>
         </div>
 
+    </section>
+    <section class="music-player-container">
+        <div class="music-player" id="music-player">
+            <div class="player-content-wrapper">
+
+                <div class="track-info-left">
+                    <div class="album-art-box">
+                        <img src="https://hdbc7y0gj1.ucarecd.net/14056887-fb2e-4aaa-9eda-e5c8497d411b/indemendalbumart.svg"
+                            alt="Album Art" class="album-art">
+                    </div>
+                    <div class="track-details">
+                        <p class="track-title" id="track-title">In Demand</p>
+                        <p class="track-artist" id="track-artist">Manni Sandhu, Navean Sandhu</p>
+                    </div>
+                </div>
+
+                <div class="controls-section">
+                    <div class="controls-buttons">
+                        <button id="shuffle-button" class="control-btn shuffle-btn" aria-label="Shuffle">
+                            <img src="img/shuffle.svg" alt="Shuffle">
+                        </button>
+                        <button id="previous-button" class="control-btn" aria-label="Previous">
+                            <img src="img/previous.svg" alt="Previous">
+                        </button>
+                        <button id="play-pause-button" class="control-btn play-pause-btn" aria-label="Play/Pause">
+                            <img src="img/play.svg" alt="Play" id="play-pause-icon">
+                        </button>
+                        <button id="next-button" class="control-btn" aria-label="Next">
+                            <img src="img/next.svg" alt="Next">
+                        </button>
+                        <button id="loop-button" class="control-btn loop-btn" aria-label="Loop">
+                            <img src="img/loop.svg" alt="Loop">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <span class="current-time" id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" value="0" max="100">
+                    <span class="total-duration" id="total-duration">0:00</span>
+                </div>
+            </div>
+        </div>
+        <audio id="audio-player" src="audio/track1.mp3" preload="metadata"></audio>
+
+        <button class="player-toggle-button" id="player-toggle-button" aria-expanded="false"
+            aria-controls="music-player">
+            <img src="img/music-icon.svg" alt="Open Music Player">
+        </button>
     </section>
 
 

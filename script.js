@@ -223,117 +223,7 @@ if (cardWrapper) {
     });
 }
 
-/* ---------------- MUSIC PLAYER ---------------- */
-const player = document.querySelector('.music-player');
-if (player) {
-    const audio = document.getElementById('audio-source');
-    const playPauseBtn = player.querySelector('.play-pause-btn');
-    const prevBtn = player.querySelector('#prev-btn');
-    const nextBtn = player.querySelector('#next-btn');
-    const albumArt = player.querySelector('.album-art img');
-    const songTitle = player.querySelector('.song-title');
-    const songArtist = player.querySelector('.song-artist');
-    const progressContainer = player.querySelector('.progress-container');
-    const progressBar = player.querySelector('.progress-bar');
-    const currentTimeEl = player.querySelector('.current-time');
-    const totalDurationEl = player.querySelector('.total-duration');
 
-
-    const playlist = [
-        { title: "Comethru", artist: "Jeremy Zucker", src: "music/your-song-1.mp3", art: "https://phg7ih4ayg.ucarecd.net/6638e53c-d780-4c0d-ab33-37a33a86ec78/comethrualnumcover.jpg" },
-        { title: "Ordinary", artist: "Alex Warren", src: "music/your-song-2.mp3", art: "https://phg7ih4ayg.ucarecd.net/cc49ae98-7fe0-4577-aa52-182f42de1c76/ab67616d00001e0242fe69c0e7e5c92f01ece8ce.jpeg" },
-        { title: "I Warned Myself", artist: "Charlie Puth", src: "music/your-song-3.mp3", art: "https://phg7ih4ayg.ucarecd.net/bea1ea1f-fd03-4c22-b5cf-13c647b584b4/1200x630bf60.jpg" },
-        { title: "I Like Me Better", artist: "Lauv", src: "music/your-song-4.mp3", art: "https://phg7ih4ayg.ucarecd.net/ee615889-0d08-497b-a387-35a7af980c51/ILikeMeBetterEnglish201720191202143751500x500.jpg" },
-        { title: "Monster", artist: "Justin Bieber & Shawn Mendes", src: "music/your-song-5.mp3", art: "https://phg7ih4ayg.ucarecd.net/d0f97bfc-35c7-4956-aa42-ffe42aabe1dd/Shawn_Mendes_and_Justin_Bieber__Monster.png" },
-        { title: "Espresso", artist: "Sabrina Carpenter", src: "music/your-song-6.mp3", art: "https://phg7ih4ayg.ucarecd.net/ecde8135-1763-407b-9d0b-33f00bb3b63a/EspressoEnglish202420240412064803500x500.jpg" },
-        { title: "Beautiful Things", artist: "Benson Boone ", src: "music/your-song-7.mp3", art: "https://phg7ih4ayg.ucarecd.net/340997ed-ea08-494c-9b27-7a8aa2676ea8/BeautifulThingsEnglish202420240404023143500x500.jpg" },
-        { title: "Living Hell", artist: "Bella Poarch", src: "music/your-song-8.mp3", art: "https://phg7ih4ayg.ucarecd.net/ef31e45c-3fb0-4278-acc1-1f7333e5659c/DollsEPEnglish202220220809070445500x500.jpg" },
-        { title: "Worth It", artist: "Fifth Harmony ft. Kid Ink", src: "music/your-song-9.mp3", art: "https://phg7ih4ayg.ucarecd.net/48a1b16a-0f36-43e1-8123-6fe9dfb1a4f9/WorthItEnglish2015500x500.jpg" },
-        { title: "7 rings", artist: "Ariana Grande", src: "music/your-song-10.mp3", art: "https://phg7ih4ayg.ucarecd.net/36c43b18-5107-428c-90b5-787e135b9a78/thankunextEnglish201920231215000717500x500.jpg" },
-        { title: "Hey Mama", artist: "David Guetta", src: "music/your-song-11.mp3", art: "https://phg7ih4ayg.ucarecd.net/91c03e11-ecb6-4497-828f-4eb1361918e4/0e5ce9fa46148e0464e3376d2d060f11.jpg" }
-        
-        
-    ];
-    let currentSongIndex = 0;
-
-    function loadSong(song) {
-        if (!song) return;
-        songTitle.textContent = song.title;
-        songArtist.textContent = song.artist;
-        albumArt.src = song.art;
-        audio.src = song.src;
-    }
-
-    async function playSong() {
-        try {
-            await audio.play();
-            playPauseBtn.classList.add('playing');
-        } catch (err) {
-            console.error("Audio play failed. This might be due to browser autoplay restrictions.", err);
-        }
-    }
-
-    function pauseSong() {
-        audio.pause();
-        playPauseBtn.classList.remove('playing');
-    }
-
-    function playNext() {
-        currentSongIndex = (currentSongIndex + 1) % playlist.length;
-        loadSong(playlist[currentSongIndex]);
-        playSong();
-    }
-
-    function playPrev() {
-        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
-        loadSong(playlist[currentSongIndex]);
-        playSong();
-    }
-
-
-    function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-    }
-    
-
-    function updateProgress() {
-        const { duration, currentTime } = audio;
-        const progressPercent = (currentTime / duration) * 100;
-        progressBar.style.width = `${progressPercent}%`;
-
-
-        currentTimeEl.textContent = formatTime(currentTime);
-    }
-
-    function setDuration() {
-        totalDurationEl.textContent = formatTime(audio.duration);
-    }
-
-    function setProgress(e) {
-        const width = this.clientWidth;
-        const clickX = e.offsetX;
-        const duration = audio.duration;
-
-        audio.currentTime = (clickX / width) * duration;
-    }
-
-    
-    if (playPauseBtn && nextBtn && prevBtn) {
-        playPauseBtn.addEventListener('click', () => { audio.paused ? playSong() : pauseSong(); });
-        nextBtn.addEventListener('click', playNext);
-        prevBtn.addEventListener('click', playPrev);
-        audio.addEventListener('timeupdate', updateProgress);
-        audio.addEventListener('loadedmetadata', setDuration);
-        progressContainer.addEventListener('click', setProgress);
-        audio.addEventListener('ended', playNext);
-        
-        loadSong(playlist[currentSongIndex]);
-    } else {
-        console.error("Music player buttons could not be found! Please check your HTML for typos in the class or ID names.");
-    }
-}
 
 
 /* ---------------- TERMINAL SCALING ON SCROLL ---------------- */
@@ -489,3 +379,217 @@ document.addEventListener('DOMContentLoaded', function () {
         
         setTheme('dark');
     }
+
+
+
+
+/* ---------------- MUSIC PLAYER ---------------- */
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+    const playlist = [
+        {
+            title: "Comethru",
+            artist: "Jeremy Zucker",
+            audioSrc: "audio/track1.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/6638e53c-d780-4c0d-ab33-37a33a86ec78/comethrualnumcover.jpg"
+        },
+        {
+            title: "Ordinary",
+            artist: "Alex Warren",
+            audioSrc: "audio/track2.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/cc49ae98-7fe0-4577-aa52-182f42de1c76/ab67616d00001e0242fe69c0e7e5c92f01ece8ce.jpeg"
+        },
+        {
+            title: "I Warned Myself",
+            artist: "Charlie Puth",
+            audioSrc: "audio/track3.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/bea1ea1f-fd03-4c22-b5cf-13c647b584b4/1200x630bf60.jpg"
+        },
+        {
+            title: "I Like Me Better",
+            artist: "Lauv",
+            audioSrc: "audio/track4.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/ee615889-0d08-497b-a387-35a7af980c51/ILikeMeBetterEnglish201720191202143751500x500.jpg"
+        },
+        {
+            title: "Monster",
+            artist: "Justin Bieber & Shawn Mendes",
+            audioSrc: "audio/track5.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/d0f97bfc-35c7-4956-aa42-ffe42aabe1dd/Shawn_Mendes_and_Justin_Bieber__Monster.png"
+        },
+        {
+            title: "Espresso",
+            artist: "Sabrina Carpenter",
+            audioSrc: "audio/track6.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/ecde8135-1763-407b-9d0b-33f00bb3b63a/EspressoEnglish202420240412064803500x500.jpg"
+        },
+        {
+            title: "Beautiful Things",
+            artist: "Benson Boone",
+            audioSrc: "audio/track7.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/340997ed-ea08-494c-9b27-7a8ac2676ea8/BeautifulThingsEnglish202420240404023143500x500.jpg"
+        },
+        {
+            title: "Living Hell",
+            artist: "Bella Poarch",
+            audioSrc: "audio/track8.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/ef31e45c-3fb0-4278-acc1-1f7333e5659c/DollsEPEnglish202220220809070445500x500.jpg"
+        },
+        {
+            title: "Worth It",
+            artist: "Fifth Harmony ft. Kid Ink",
+            audioSrc: "audio/track9.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/48a1b16a-0f36-43e1-8123-6fe9dfb1a4f9/WorthItEnglish2015500x500.jpg"
+        },
+        {
+            title: "7 rings",
+            artist: "Ariana Grande",
+            audioSrc: "audio/track10.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/36c43b18-5107-428c-90b5-787e135b9a78/thankunextEnglish201920231215000717500x500.jpg"
+        },
+        {
+            title: "Hey Mama",
+            artist: "David Guetta",
+            audioSrc: "audio/track11.mp3",
+            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/91c03e11-ecb6-4497-828f-4eb1361918e4/0e5ce9fa46148e0464e3376d2d060f11.jpg"
+        }
+    ];
+
+    let currentTrackIndex = 0;
+    let isShuffling = false;
+
+    const audioPlayer = document.getElementById('audio-player');
+    const playPauseButton = document.getElementById('play-pause-button');
+    const playPauseIcon = document.getElementById('play-pause-icon');
+    const progressBar = document.getElementById('progress-bar');
+    const shuffleButton = document.getElementById('shuffle-button');
+    const loopButton = document.getElementById('loop-button');
+    const nextButton = document.getElementById('next-button');
+    const previousButton = document.getElementById('previous-button');
+    const playerContainer = document.querySelector('.music-player-container');
+    const toggleButton = document.getElementById('player-toggle-button');
+
+    
+    const formatTime = (seconds) => {
+        const min = Math.floor(seconds / 60);
+        const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+        return `${min}:${sec}`;
+    };
+
+    const loadTrack = (index) => {
+        const track = playlist[index];
+
+        document.getElementById('track-title').textContent = track.title;
+        document.getElementById('track-artist').textContent = track.artist;
+        document.querySelector('.album-art').src = track.albumArtSrc;
+
+        audioPlayer.src = track.audioSrc;
+        audioPlayer.load();
+
+        playPauseIcon.src = 'img/play.svg';
+    };
+
+    const playNextTrack = () => {
+        if (isShuffling) {
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * playlist.length);
+            } while (newIndex === currentTrackIndex);
+            currentTrackIndex = newIndex;
+        } else {
+            currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+        }
+        loadTrack(currentTrackIndex);
+        audioPlayer.play();
+        playPauseIcon.src = 'img/pause.svg';
+    };
+
+    const playPreviousTrack = () => {
+        if (isShuffling) {
+            playNextTrack();
+        } else {
+            if (audioPlayer.currentTime > 3) {
+                audioPlayer.currentTime = 0;
+            } else {
+                currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+                loadTrack(currentTrackIndex);
+            }
+        }
+        audioPlayer.play();
+        playPauseIcon.src = 'img/pause.svg';
+    };
+
+    loadTrack(currentTrackIndex);
+
+    // Toggle button logic
+    if (toggleButton && playerContainer) {
+        toggleButton.addEventListener('click', () => {
+            const isOpen = playerContainer.classList.toggle('is-open');
+            toggleButton.setAttribute('aria-expanded', isOpen);
+        });
+    }
+
+    // Play/Pause button logic
+    if (audioPlayer && playPauseButton) {
+        playPauseButton.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseIcon.src = 'img/pause.svg';
+            } else {
+                audioPlayer.pause();
+                playPauseIcon.src = 'img/play.svg';
+            }
+        });
+    }
+
+    // Next/Previous buttons
+    if (nextButton) {
+        nextButton.addEventListener('click', playNextTrack);
+    }
+
+    if (previousButton) {
+        previousButton.addEventListener('click', playPreviousTrack);
+    }
+
+    // Shuffle button logic
+    if (shuffleButton) {
+        shuffleButton.addEventListener('click', () => {
+            isShuffling = !isShuffling;
+            shuffleButton.classList.toggle('active', isShuffling);
+        });
+    }
+
+    // Loop button logic
+    if (loopButton) {
+        loopButton.addEventListener('click', () => {
+            audioPlayer.loop = !audioPlayer.loop;
+            loopButton.classList.toggle('active', audioPlayer.loop);
+        });
+    }
+
+    // Update progress bar max value when metadata is loaded
+    audioPlayer.onloadedmetadata = () => {
+        if (!isNaN(audioPlayer.duration)) {
+            progressBar.max = audioPlayer.duration;
+        }
+    };
+
+    // Update progress bar value during playback
+    audioPlayer.ontimeupdate = () => {
+        if (!isNaN(audioPlayer.duration)) {
+            progressBar.value = audioPlayer.currentTime;
+        }
+    };
+
+    // Allow seeking via the progress bar
+    progressBar.addEventListener('input', () => {
+        audioPlayer.currentTime = progressBar.value;
+    });
+
+    // Automatically play next track when current one ends (if not looping)
+    audioPlayer.addEventListener('ended', () => {
+        if (!audioPlayer.loop) {
+            playNextTrack();
+        }
+    });
+});
