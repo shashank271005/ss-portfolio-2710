@@ -2883,7 +2883,7 @@ body {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 10rem 1rem 4rem 1rem; 
+    padding: 10rem 1rem 4rem 1rem;
 }
 
 .showcase-container::selection {
@@ -2931,7 +2931,7 @@ body {
 }
 
 .masonry-item {
-    display: inline-block; 
+    display: inline-block;
     width: 100%;
     margin-bottom: 1.5rem;
     border-radius: 12px;
@@ -2942,7 +2942,7 @@ body {
 .masonry-item img {
     width: 100%;
     height: auto;
-    display: block; 
+    display: block;
 }
 
 .masonry-item:hover {
@@ -2967,14 +2967,14 @@ body {
     .masonry-item {
         margin-bottom: 1rem;
     }
-    
+
     .showcase-header h1 {
         font-size: 2.5rem;
         padding-top: 2.5rem;
     }
 
     .showcase-container {
-        padding-top: 8rem; 
+        padding-top: 8rem;
     }
 }
 
@@ -3009,6 +3009,9 @@ body {
     align-items: flex-end;
     pointer-events: none;
     z-index: 9999;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .music-player {
@@ -3017,13 +3020,12 @@ body {
     left: 0;
     width: 100%;
     height: var(--player-height);
-    padding: 0 40px; 
+    padding: 0 40px;
     background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 50%,
-        rgba(0, 0, 0, 1) 100%
-    );
-    background-color: transparent; 
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.8) 50%,
+            rgba(0, 0, 0, 1) 100%);
+    background-color: transparent;
     opacity: 0;
     transform: translateY(var(--player-height));
     visibility: hidden;
@@ -3056,11 +3058,11 @@ body {
     align-items: center;
     gap: 15px;
     flex-shrink: 0;
-    max-width: 400px; 
+    max-width: 400px;
 }
 
 .album-art-box {
-    width: 50px; 
+    width: 50px;
     height: 50px;
     border-radius: 6px;
     overflow: hidden;
@@ -3234,6 +3236,7 @@ body {
     .music-player {
         padding: 0 20px;
     }
+
     .controls-buttons {
         gap: 20px;
     }
@@ -3243,42 +3246,52 @@ body {
     :root {
         --player-height: 60px;
     }
+
     .music-player {
         height: var(--player-height);
         padding: 0 15px;
     }
+
     .controls-section {
         position: static;
         transform: none;
-        flex-grow: 1; 
+        flex-grow: 1;
         justify-content: center;
     }
+
     .track-info-left {
         width: auto;
         max-width: none;
         flex-shrink: 1;
     }
+
     .album-art-box {
         width: 40px;
         height: 40px;
     }
+
     .track-title {
         font-size: 0.8rem;
     }
+
     .track-artist {
         font-size: 0.7rem;
     }
+
     .controls-buttons {
         gap: 15px;
     }
+
     .control-btn img {
         width: 18px;
         height: 18px;
     }
+
     .play-pause-btn img {
         width: 22px;
         height: 22px;
     }
+
     .progress-section {
         display: none;
     }
@@ -3295,7 +3308,7 @@ body {
         --player-width: 95vw;
         --player-height: 55px;
     }
-    
+
     .music-player {
         width: var(--player-width);
         height: var(--player-height);
@@ -3303,14 +3316,14 @@ body {
         border-radius: 10px;
         bottom: 8px;
     }
-    
+
     .player-content-wrapper {
         padding: 8px;
         gap: 6px;
         flex-direction: row;
         align-items: center;
     }
-    
+
     .player-top-content {
         flex: 1;
         flex-direction: row;
@@ -3319,73 +3332,73 @@ body {
         height: auto;
         padding: 0;
     }
-    
+
     .album-art-box {
         width: 40px;
         height: 40px;
         border-radius: 6px;
         flex-shrink: 0;
     }
-    
+
     .track-info {
         flex-grow: 1;
         white-space: nowrap;
         min-width: 0;
     }
-    
+
     .track-title {
         font-size: 0.75rem;
         margin-bottom: 1px;
     }
-    
+
     .track-artist {
         font-size: 0.65rem;
         opacity: 0.6;
     }
-    
+
     .progress-section {
         display: none;
     }
-    
+
     .controls-section {
         padding: 0;
         margin: 0;
     }
-    
+
     .controls-buttons {
         gap: 8px;
     }
-    
+
     .control-btn {
         padding: 3px;
     }
-    
+
     .control-btn img {
         width: 16px;
         height: 16px;
         opacity: 0.7;
     }
-    
+
     .control-btn:hover img {
         opacity: 1;
     }
-    
+
     .play-pause-btn {
         width: 30px;
         height: 30px;
     }
-    
+
     .play-pause-btn img {
         width: 18px;
         height: 18px;
         opacity: 1;
     }
-    
-    .shuffle-btn img, 
+
+    .shuffle-btn img,
     .loop-btn img {
         display: none;
     }
-    
+
     .player-toggle-button {
         width: 42px;
         height: 42px;
@@ -3393,7 +3406,7 @@ body {
         right: 8px;
         z-index: 10001;
     }
-    
+
     .player-toggle-button img {
         width: 20px;
         height: 20px;
