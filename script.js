@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: "Beautiful Things",
             artist: "Benson Boone",
             audioSrc: "audio/track7.mp3",
-            albumArtSrc: "https://phg7ih4ayg.ucarecd.net/340997ed-ea08-494c-9b27-7a8ac2676ea8/BeautifulThingsEnglish202420240404023143500x500.jpg"
+            albumArtSrc: "https://hdbc7y0gj1.ucarecd.net/eebc269f-3937-496e-95d2-6d21c4299792/beautifulthingalbumcover.jpeg"
         },
         {
             title: "Living Hell",
