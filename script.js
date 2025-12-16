@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadTrack(currentTrackIndex);
 
-    // Toggle button logic
+
     if (toggleButton && playerContainer) {
         toggleButton.addEventListener('click', () => {
             const isOpen = playerContainer.classList.toggle('is-open');
@@ -529,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Play/Pause button logic
+ 
     if (audioPlayer && playPauseButton) {
         playPauseButton.addEventListener('click', () => {
             if (audioPlayer.paused) {
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Next/Previous buttons
+ 
     if (nextButton) {
         nextButton.addEventListener('click', playNextTrack);
     }
@@ -551,7 +551,7 @@ document.addEventListener('DOMContentLoaded', function () {
         previousButton.addEventListener('click', playPreviousTrack);
     }
 
-    // Shuffle button logic
+ 
     if (shuffleButton) {
         shuffleButton.addEventListener('click', () => {
             isShuffling = !isShuffling;
@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Loop button logic
+  
     if (loopButton) {
         loopButton.addEventListener('click', () => {
             audioPlayer.loop = !audioPlayer.loop;
@@ -567,26 +567,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Update progress bar max value when metadata is loaded
+    
     audioPlayer.onloadedmetadata = () => {
         if (!isNaN(audioPlayer.duration)) {
             progressBar.max = audioPlayer.duration;
         }
     };
 
-    // Update progress bar value during playback
+    
     audioPlayer.ontimeupdate = () => {
         if (!isNaN(audioPlayer.duration)) {
             progressBar.value = audioPlayer.currentTime;
         }
     };
 
-    // Allow seeking via the progress bar
+    
     progressBar.addEventListener('input', () => {
         audioPlayer.currentTime = progressBar.value;
     });
 
-    // Automatically play next track when current one ends (if not looping)
+
     audioPlayer.addEventListener('ended', () => {
         if (!audioPlayer.loop) {
             playNextTrack();

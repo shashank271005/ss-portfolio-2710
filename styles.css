@@ -3012,6 +3012,7 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: google-sans, sans-serif;
 }
 
 .music-player {
@@ -3302,7 +3303,7 @@ body {
     }
 }
 
-/* iPhone SE and very small mobile screens (375px) */
+
 @media (max-width: 390px) {
     :root {
         --player-width: 95vw;
