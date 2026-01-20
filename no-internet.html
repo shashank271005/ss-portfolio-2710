@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Internet Connection</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body.no-internet {
+            min-height: 100vh;
+            background: #000000;
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .background-giant {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 38vw;
+            font-weight: 500;
+            letter-spacing: -1vw;
+            user-select: none;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(90deg, #ffb347 0%, #ff6f3c 30%, #ff3c6f 60%, #a259ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            /* opacity: 0.32; */
+            filter: blur(0.5px) brightness(1.1);
+        }
+        .no-internet-card {
+            position: relative;
+            z-index: 2;
+            background: rgba(30, 30, 30, 0.45);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.35);
+            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            max-width: 400px;
+            width: 90vw;
+            text-align: center;
+            margin: 0 auto;
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
+            border: 1.5px solid rgba(255,255,255,0.13);
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.35), 0 1.5px 8px 0 rgba(255,255,255,0.04) inset;
+        }
+        .no-internet-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            letter-spacing: -0.5px;
+        }
+        .no-internet-desc {
+            font-size: 1.05rem;
+            color: #bdbdbd;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .back-btn {
+            background: linear-gradient(90deg, #232526 0%, #414345 100%);
+            color: #fff;
+            border: none;
+            border-radius: 2rem;
+            padding: 0.8rem 2.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.18);
+            transition: background 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .back-btn:hover {
+            background: linear-gradient(90deg, #414345 0%, #232526 100%);
+            box-shadow: 0 4px 16px 0 rgba(0,0,0,0.28);
+        }
+    </style>
+</head>
+<body class="no-internet">
+    <div class="background-giant">404</div>
+    <div class="no-internet-card">
+        <div class="no-internet-title">Oops, no internet connection</div>
+        <div class="no-internet-desc">
+            It looks like you are offline.<br>
+            Please check your connection and try again.
+        </div>
+        <button class="back-btn" onclick="location.reload()">Reload</button>
+    </div>
+</body>
+</html>

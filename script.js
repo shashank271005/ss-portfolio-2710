@@ -1,6 +1,22 @@
 document.addEventListener('contextmenu', event => event.preventDefault()); /* disabled right click */
 
 document.addEventListener('DOMContentLoaded', function () {
+    // --- No Internet Connection Handling ---
+    function handleConnectionChange() {
+        if (!navigator.onLine) {
+            if (!window.location.pathname.endsWith('no-internet.html')) {
+                window.location.href = 'no-internet.html';
+            }
+        } else {
+            // If on no-internet.html and back online, redirect to main page
+            if (window.location.pathname.endsWith('no-internet.html')) {
+                window.location.href = 'index.html';
+            }
+        }
+    }
+    window.addEventListener('offline', handleConnectionChange);
+    window.addEventListener('online', handleConnectionChange);
+    handleConnectionChange();
     /* ---------------- ICON CYCLE ---------------- */
     const icons = document.querySelectorAll('.icon-cycle .icon');
     const bgColors = ['#d6ff2a', '#4285f4', '#ffb6ea'];
